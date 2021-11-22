@@ -1,0 +1,31 @@
+<odoo>
+    <!-- Event - Description -->
+    <template id="e_service_description_full" name="E-Service Description" track="1">
+        <t t-call="website.layout">
+            <div id="wrap" class="o_wevent_index">
+                <!-- Topbar -->
+                <t t-call="website_project_e_service.index_topbar"/>
+                <!-- Drag/Drop Area -->
+                <div id="oe_structure_we_index_1" class="oe_structure oe_empty"/>
+
+                <!-- Content -->
+                <div class="container">
+                    <section>
+                        <div t-field="project.e_service_icon" t-options="{'widget': 'image', 'itemprop': 'image'}" class="d-flex h-100 justify-content-center align-items-center"/>
+
+                        <div class="container d-flex flex-column flex-grow-1 justify-content-around">
+                            <div class="">
+                                <h1 t-field="project.name" placeholder="E-service Name" class="text-truncate"/>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:25px">
+                            <span t-field="project.e_service_description" class="text-truncate"/>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>
