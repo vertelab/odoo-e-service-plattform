@@ -26,6 +26,7 @@ class ProjectEServiceCategory(models.Model):
     _name = 'project.e_service.category'
     _rec_name = 'e_service_id'
 
+    name = fields.Char(related='e_service_id.name', string="E-Service")
     e_service_id = fields.Many2one('e_service.category', string="E-Service", required=True)
     e_service_category_icon = fields.Binary(string="Icon")
     sequence = fields.Integer(string="Sequence")
