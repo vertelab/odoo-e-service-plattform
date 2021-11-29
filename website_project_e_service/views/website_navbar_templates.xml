@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <template id="e_service_user_navbar" inherit_id="website.user_navbar" name="E-Service Project">
+            <xpath expr="//nav[@t-if='website']/ul[hasclass('o_menu_systray')]/li[@id='new-content-menu']/div[@id='o_new_content_menu_choices']/div[1]/div[1]/t/div[last()]" position="after">
+                <t t-set="mod" t-value="env.ref('base.module_project_e_service')"/>
+<!--                t-att-data-module-id="mod.id" t-att-data-module-shortdesc="mod.shortdesc"-->
+                <div name="module_project_e_service" groups="base.group_system"
+                     class="col-md-4 mb8 o_new_content_element o_new_content_element_once">
+                    <a href="#" data-url="/e-service" data-action="new_e_service">
+                        <i class="fa fa-comments"/>
+                        <p>E-Service</p>
+                    </a>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <record id="project_e_service_category_tree" model="ir.ui.view">
+            <field name="name">project.e_service.category.tree</field>
+            <field name="model">project.e_service.category</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sequence" widget="handle"/>
+                    <field name="e_service_id"/>
+                    <field name="project_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="project_e_service_category_form" model="ir.ui.view">
+            <field name="name">project.e_service.category.form</field>
+            <field name="model">project.e_service.category</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_right">
+                            <field name="e_service_category_icon" widget="image" class="oe_avatar"/>
+                        </div>
+                        <div class="oe_left">
+                            <group>
+                                <field name="e_service_id"/>
+                                <field name="project_id"/>
+                                <field name="sequence" groups="base.group_no_one"/>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="project_e_service_category_action" model="ir.actions.act_window">
+            <field name="name">Project E-Service Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.e_service.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Define a new e-service category
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_project_e_service_category" action="project_e_service_category_action" parent="project.menu_project_config" sequence="100"/>
+    </data>
+</odoo>

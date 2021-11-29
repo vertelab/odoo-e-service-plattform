@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="project_project_form" model="ir.ui.view">
+            <field name="name">project.project.form</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options_active']/div[1]" position="after">
+                    <div>
+                        <label for="is_e_service" class="oe_inline" string="Is Service:"/>
+                        <field name="is_e_service" class="oe_inline oe_input_align"/>
+                    </div>
+
+                </xpath>
+                <xpath expr="//page[last()]" position="after">
+                    <page string="E-Service" name="e_service">
+                        <div class="oe_right">
+                            <field name="e_service_icon" widget="image" class="oe_avatar"/>
+                        </div>
+                        <div class="oe_left">
+                            <group>
+                                <field name="e_service_category">
+                                    <tree editable="bottom">
+                                        <field name="e_service_id"/>
+                                    </tree>
+                                </field>
+                                <field name="e_service_description"/>
+                            </group>
+                        </div>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
