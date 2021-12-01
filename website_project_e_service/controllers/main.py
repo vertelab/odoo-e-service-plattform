@@ -70,10 +70,10 @@ class ProjectEServiceController(http.Controller):
         }
         return request.render("website_project_e_service.index", values)
 
-    @http.route(['''/e-service/<model("project.project"):project>'''], type='http', auth="public", website=True)
-    def project_e_service(self, project, **searches):
-        values = {
-            'project': project.sudo()
-        }
+    @http.route(['''/e-service/<string:form>'''], type='http', auth="public", website=True)
+    def project_e_service(self, form, **searches):
+        id = int(form.split('-')[-1])
+        project = request.env['project.project'].sudo().browse(id)
+        values = {'project': project}
 
         return request.render("website_project_e_service.e_service_description_full", values)
