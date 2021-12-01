@@ -11,45 +11,41 @@ class ProjectEServiceController(http.Controller):
     @http.route(['/e-services', '/e-services/page/<int:page>'], type='http', auth="public", website=True)
     def project_e_services(self, page=1, **searches):
         website = request.website
-        project_ids = request.env['project.project'].sudo()
-        domain = [('is_e_service', '=', True)]
+        e_service_ids = request.env['project.e_service.category'].sudo()
 
         current_e_category = None
 
+        domain = []
+
         if searches.get('search'):
             domain += [('name', 'ilike', searches['search'])]
-            project_ids = project_ids.search(domain)
+            e_service_ids = e_service_ids.search(domain)
         elif searches.get('e_category'):
-            project_e_service_ids = request.env['project.e_service.category'].search([('e_service_id', '=', int(searches['e_category']))])
-            project_ids = project_e_service_ids.mapped('project_id')
-            current_e_category = request.env['e_service.category'].browse(int(searches['e_category']))
+            domain += [('e_service_id', '=', int(searches['e_category']))]
+            e_service_ids = e_service_ids.search(domain)
         else:
-            project_ids = project_ids.search(domain)
+            e_service_ids = e_service_ids.search(domain)
 
         step = 12  # Number of events per page
-        project_count = project_ids.search_count(domain)
+        service_count = e_service_ids.search_count(domain)
 
-        e_categories = request.env['project.e_service.category'].search([])
-
-        e_categories_items = []
-
-        for rec in e_categories:
-            if rec.project_id:
-                e_categories_items.append({
-                    'e_category_id': rec.e_service_id,
-                    'e_category_id_count': 1
-                })
+        e_service_list = []
+        for _rec in e_service_ids:
+            e_service_list.append({
+                'e_service_id': _rec.e_service_id,
+                'project_ids': _rec.project_id
+            })
 
         _e_categories_items = OrderedDict()
-        for items in e_categories_items:
-            _e_categories_items.setdefault(items['e_category_id'], []).append(items['e_category_id_count'])
+        for items in e_service_list:
+            _e_categories_items.setdefault(items['e_service_id'], []).append(items['project_ids'])
 
-        e_categories_items = [{'e_category_id': k,  'e_category_id_count': sum(v)} for k, v in _e_categories_items.items()]
+        e_service_ids = [{'e_service_id': k,  'project_ids': set(v)} for k, v in _e_categories_items.items()]
 
         pager = website.pager(
             url="/e-services",
             url_args=searches,
-            total=project_count,
+            total=service_count,
             page=page,
             step=step,
             scope=5)
@@ -57,19 +53,19 @@ class ProjectEServiceController(http.Controller):
         searches.setdefault('search', '')
         searches.setdefault('e_category', 'all')
 
-        keep = QueryURL('/event',
+        keep = QueryURL('/e-services',
                         **{key: value for key, value in searches.items() if (key == 'search' or value != 'all')})
 
         values = {
-            'project_ids': project_ids,
+            'e_service_ids': e_service_ids,
             'pager': pager,
-            'e_categories': e_categories_items,
             'current_e_category': current_e_category,
             'keep': keep,
             'searches': searches,
         }
         return request.render("website_project_e_service.index", values)
 
+    #
     @http.route(['''/e-service/<model("project.project"):project>'''], type='http', auth="public", website=True)
     def project_e_service(self, project, **searches):
         values = {

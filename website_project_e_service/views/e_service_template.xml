@@ -34,11 +34,11 @@
                                         <t t-else="">All Categories</t>
                                     </a>
                                     <div class="dropdown-menu">
-                                        <t t-foreach="e_categories" t-as="e_category">
-                                            <t t-if="e_category['e_category_id']">
-                                                <a t-att-href="keep('/e-services', e_category=e_category['e_category_id'].id)"  t-attf-class="dropdown-item d-flex align-items-center justify-content-between {searches.get('e_category') == str(e_category['e_category_id'] and e_category['e_category_id'].id) and 'active'}">
-                                                    <t t-esc="e_category['e_category_id'].name"/>
-                                                    <span t-esc="e_category['e_category_id_count']" class="badge badge-pill badge-primary ml-auto"/>
+                                        <t t-foreach="e_service_ids" t-as="e_service_id">
+                                            <t t-if="e_service_id['project_ids']">
+                                                <a t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"  t-attf-class="dropdown-item d-flex align-items-center justify-content-between {searches.get('e_category') == str(e_category['e_category_id'] and e_service_id['e_service_id'].id) and 'active'}">
+                                                    <t t-esc="e_service_id['e_service_id'].name"/>
+                                                    <span t-esc="len(e_service_id['project_ids'])" class="badge badge-pill badge-primary ml-auto"/>
                                                 </a>
                                             </t>
                                         </t>
@@ -71,7 +71,7 @@
                         <div class="col-md my-5">
                             <div class="row">
                                 <!-- No events -->
-                                <t t-if="not project_ids">
+                                <t t-if="not e_service_ids">
                                     <div class="col-12">
                                         <div class="h2 mb-3">No service found.</div>
                                         <div class="alert alert-info text-center" groups="event.group_event_manager">
@@ -81,30 +81,43 @@
                                 </t>
                                 <!-- List -->
 
-                                <t t-foreach="project_ids" t-as="project">
-                                    <div class="col-md-4" style="margin-bottom: 20px;">
-                                        <div class="card">
-                                            <div class="card-img-top p-1 oe_product_image">
-                                                <a t-attf-href="/e-service/#{ slug(project) }" class="d-block h-100" itemprop="url">
-                                                    <span t-field="project.e_service_icon"
-                                                        t-options="{'widget': 'image', 'itemprop': 'image'}"
-                                                        class="d-flex h-100 justify-content-center align-items-center"/>
+                                <t t-foreach="e_service_ids" t-as="e_service_id">
+                                    <div class="col-md-12" style="display:flex; justify-content: center; align-items: center; border: 1px groove black; height: 70px; border-radius: 5px;margin-bottom: 40px">
+                                        <a t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"  t-attf-class="d-flex align-items-center">
+                                            <h1>
+                                                <t t-esc="e_service_id['e_service_id'].name"/>
+                                            </h1>
+                                        </a>
+
+                                    </div>
+
+                                    <t t-foreach="e_service_id['project_ids']" t-as="project">
+                                        <div class="col-md-4" style="margin-bottom: 20px;">
+                                            <div class="card" style="padding-left: unset !important">
+                                                <div class="card-img-top p-1 oe_product_image">
+                                                    <a t-attf-href="/e-service/#{ slug(project) }" class="d-block h-100" itemprop="url">
+                                                        <span t-field="project.e_service_icon"
+                                                              t-options="{'widget': 'image', 'itemprop': 'image'}"
+                                                              class="d-flex h-100 justify-content-center align-items-center"/>
+                                                    </a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        <span t-field="project.name"/>
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        <span t-field="project.teaser"/>
+                                                    </p>
+                                                </div>
+                                                <a t-attf-href="/e-service/#{ slug(project) }">
+                                                    <div class="card-footer text-muted btn-primary text-center">
+                                                        <span style="color: #FFFFFF">View Service</span>
+                                                    </div>
                                                 </a>
                                             </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">
-                                                    <span t-field="project.name"/>
-                                                </h5>
-                                                <p class="card-text">
-                                                    <span t-field="project.teaser"/>
-                                                </p>
-                                            </div>
-                                            <a t-attf-href="/e-service/#{ slug(project) }">
-                                                <div class="card-footer text-muted btn-primary text-center">
-                                                    <span style="color: #FFFFFF">View Service</span>
-                                                </div>
-                                            </a>
                                         </div>
+                                    </t>
+                                    <div class="col-md-12" style="padding-left: unset !important;margin-top: 40px;">
                                     </div>
                                 </t>
                             </div>
