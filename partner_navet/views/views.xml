@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="navet_import_wizard">
+      <field name="name">navet_import_wizard</field>
+      <field name="model">partner.navet.import</field>
+      <field name="arch" type="xml">
+        <form>
+            <field name="person_number"/>
+            <button name="action_import_navet_person" string="Import" type="object"></button>
+        </form>
+      </field>
+    </record>
+   <record model="ir.actions.act_window" id="navet_import">
+      <field name="name">Import Contacts from Navet</field>
+      <field name="res_model">partner.navet.import</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+      <field name="view_id" ref="navet_import_wizard"/>
+      <field name="binding_model_id" ref="base.model_res_partner"/>
+    </record>
+
+
+
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="partner_navet.action_window">
+      <field name="name">partner_navet window</field>
+      <field name="res_model">partner_navet.partner_navet</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="partner_navet.action_server">
+      <field name="name">partner_navet server</field>
+      <field name="model_id" ref="model_partner_navet_partner_navet"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="partner_navet" id="partner_navet.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="partner_navet.menu_1" parent="partner_navet.menu_root"/>
+    <menuitem name="Menu 2" id="partner_navet.menu_2" parent="partner_navet.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="partner_navet.menu_1_list" parent="partner_navet.menu_1"
+              action="partner_navet.action_window"/>
+    <menuitem name="Server to list" id="partner_navet" parent="partner_navet.menu_2"
+              action="partner_navet.action_server"/>
+-->
+  </data>
+</odoo>

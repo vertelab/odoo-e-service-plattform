@@ -5,6 +5,7 @@ from odoo.tools import html2plaintext
 
 class Project(models.Model):
     _inherit = 'project.project'
+    e_service_form = fields.Html()
 
     @api.model
     def create_project_portal(self, values):
