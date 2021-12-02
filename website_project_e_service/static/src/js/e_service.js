@@ -27,7 +27,7 @@ odoo.define('website_project_e_service.new_e_service', function (require) {
             var self = this;
 
             return self._rpc({
-                model: 'project.e_service.category',
+                model: 'e_service.category',
                 method: 'search_read',
                 args: [[], ['name']],
             }).then(function (project_services) {

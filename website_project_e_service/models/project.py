@@ -17,7 +17,7 @@ class Project(models.Model):
         project_id = self.create({
             'name': values['project_name'],
             'e_service_category': [
-                (4, int(values['e_service_id']))
+                (0, 0, {'e_service_id': int(values['e_service_id'])})
             ],
             'is_e_service': True
         })
