@@ -11,6 +11,11 @@ class Project(models.Model):
     e_service_icon = fields.Binary(string="Icon")
     e_service_description = fields.Html(string="Description")
     teaser = fields.Text('Teaser', compute='_compute_teaser')
+    e_service_form = fields.Html(
+        sanitize_attributes=False,
+        sanitize_form=False,
+        translate=html_translate,
+    )
 
     @api.depends('e_service_description')
     def _compute_teaser(self):

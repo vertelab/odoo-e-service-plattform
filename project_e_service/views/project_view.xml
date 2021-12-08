@@ -10,7 +10,6 @@
                         <label for="is_e_service" class="oe_inline" string="Is Service:"/>
                         <field name="is_e_service" class="oe_inline oe_input_align"/>
                     </div>
-
                 </xpath>
                 <xpath expr="//page[last()]" position="after">
                     <page string="E-Service" name="e_service">
@@ -27,6 +26,9 @@
                                 <field name="e_service_description"/>
                             </group>
                         </div>
+                    </page>
+                    <page name="form" string="E-service form">
+                        <field name="e_service_form" widget="html"/>
                     </page>
                 </xpath>
             </field>

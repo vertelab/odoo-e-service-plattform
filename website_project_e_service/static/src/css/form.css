@@ -1,0 +1,7 @@
+div.tab-pane.fade {
+    display: none;
+}
+
+div.tab-pane.fade.active {
+    display: block;
+}

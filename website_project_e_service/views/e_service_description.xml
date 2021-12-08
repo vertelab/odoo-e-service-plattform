@@ -22,10 +22,9 @@
                         <div style="margin-bottom:25px">
                             <span t-field="project.e_service_description" class="text-truncate"/>
                         </div>
-                            <div t-field="project.e_service_form" />
                     </section>
                 </div>
-
+                <div t-field="project.e_service_form" />
             </div>
         </t>
     </template>
