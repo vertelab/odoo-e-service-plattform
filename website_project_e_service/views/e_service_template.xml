@@ -96,7 +96,7 @@
                                             <div class="card" style="padding-left: unset !important">
                                                 <div class="card-img-top p-1 oe_product_image">
                                                     <a t-attf-href="/e-service/#{ slug(project) }" class="d-block h-100" itemprop="url">
-                                                        <span t-field="project.e_service_icon"
+                                                        <span t-esc="project.e_service_icon"
                                                               t-options="{'widget': 'image', 'itemprop': 'image'}"
                                                               class="d-flex h-100 justify-content-center align-items-center"/>
                                                     </a>
