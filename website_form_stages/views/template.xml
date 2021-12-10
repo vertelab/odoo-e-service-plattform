@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <template id="website_form_stages" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_effect']"   position="inside">
+                <div class="o_panel_body">
+                    <t t-snippet="website_form_stages.website_form_stages_content" t-thumbnail="/website_form_stages/static/src/img/form_stages_icon.png" />
+                </div>
+            </xpath>
+       </template>
+    </data>
+</odoo>
