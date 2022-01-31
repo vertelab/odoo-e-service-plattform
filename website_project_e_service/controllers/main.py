@@ -15,7 +15,7 @@ class ProjectEServiceController(http.Controller):
 
         current_e_category = None
 
-        domain = []
+        domain = [('project_id', '!=', False)]
 
         if searches.get('search'):
             domain += [('name', 'ilike', searches['search'])]

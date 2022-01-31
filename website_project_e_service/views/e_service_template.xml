@@ -36,7 +36,10 @@
                                     <div class="dropdown-menu">
                                         <t t-foreach="e_service_ids" t-as="e_service_id">
                                             <t t-if="e_service_id['project_ids']">
-                                                <a t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"  t-attf-class="dropdown-item d-flex align-items-center justify-content-between {searches.get('e_category') == str(e_category['e_category_id'] and e_service_id['e_service_id'].id) and 'active'}">
+                                                <a 
+                                                    t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"
+                                                    t-attf-class="dropdown-item d-flex align-items-center justify-content-between {searches.get('e_category') == str(e_category['e_category_id'] and e_service_id['e_service_id'].id) and 'active'}"
+                                                >
                                                     <t t-esc="e_service_id['e_service_id'].name"/>
                                                     <span t-esc="len(e_service_id['project_ids'])" class="badge badge-pill badge-primary ml-auto"/>
                                                 </a>
@@ -96,9 +99,12 @@
                                             <div class="card" style="padding-left: unset !important">
                                                 <div class="card-img-top p-1 oe_product_image">
                                                     <a t-attf-href="/e-service/#{ slug(project) }" class="d-block h-100" itemprop="url">
-                                                        <span t-esc="project.e_service_icon"
-                                                              t-options="{'widget': 'image', 'itemprop': 'image'}"
-                                                              class="d-flex h-100 justify-content-center align-items-center"/>
+                                                        <span 
+                                                            t-if="project.e_service_icon" 
+                                                            t-esc="project.e_service_icon"
+                                                            t-options="{'widget': 'image', 'itemprop': 'image'}"
+                                                            class="d-flex h-100 justify-content-center align-items-center"
+                                                        />
                                                     </a>
                                                 </div>
                                                 <div class="card-body">

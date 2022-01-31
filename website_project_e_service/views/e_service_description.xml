@@ -11,20 +11,34 @@
                 <!-- Content -->
                 <div class="container">
                     <section>
-                        <div t-esc="project.e_service_icon" t-options="{'widget': 'image', 'itemprop': 'image'}" class="d-flex h-100 justify-content-center align-items-center"/>
-
+                        <t t-if="project.e_service_icon">
+                            <div 
+                                t-esc="project.e_service_icon" 
+                                t-options="{'widget': 'image', 'itemprop': 'image'}" 
+                                class="d-flex h-100 justify-content-center align-items-center"
+                                />
+                        </t>
                         <div class="container d-flex flex-column flex-grow-1 justify-content-around">
                             <div class="">
-                                <h1 t-field="project.name" placeholder="E-service Name" class="text-truncate"/>
+                                <h1 
+                                    t-field="project.name" 
+                                    class="text-truncate"
+                                    placeholder="E-service Name" 
+                                />
                             </div>
                         </div>
 
                         <div style="margin-bottom:25px">
-                            <span t-field="project.e_service_description" class="text-truncate"/>
+                            <span 
+                                t-field="project.e_service_description" 
+                                class="text-truncate"
+                            />
                         </div>
                     </section>
                 </div>
-                <div t-field="project.e_service_form" />
+                <t t-if="project.e_service_form">
+                    <div t-field="project.e_service_form" />
+                </t>
             </div>
         </t>
     </template>
