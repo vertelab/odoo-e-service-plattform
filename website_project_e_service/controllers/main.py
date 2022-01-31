@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 
+from dbus import MissingErrorHandlerException
 from odoo import fields, http, _
 from odoo.http import request
 from collections import OrderedDict
+from odoo.exceptions import MissingError
 from odoo.addons.website.controllers.main import QueryURL
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class ProjectEServiceController(http.Controller):
@@ -38,9 +43,11 @@ class ProjectEServiceController(http.Controller):
 
         _e_categories_items = OrderedDict()
         for items in e_service_list:
-            _e_categories_items.setdefault(items['e_service_id'], []).append(items['project_ids'])
+            _e_categories_items.setdefault(
+                items['e_service_id'], []).append(items['project_ids'])
 
-        e_service_ids = [{'e_service_id': k,  'project_ids': set(v)} for k, v in _e_categories_items.items()]
+        e_service_ids = [{'e_service_id': k,  'project_ids': set(
+            v)} for k, v in _e_categories_items.items()]
 
         pager = website.pager(
             url="/e-services",
@@ -67,8 +74,9 @@ class ProjectEServiceController(http.Controller):
 
     @http.route(['''/e-service/<string:form>'''], type='http', auth="public", website=True)
     def project_e_service(self, form, **searches):
-        id = int(form.split('-')[-1])
+        id = 0
+        if '-' in form:
+            id = int(form.split('-')[-1])
         project = request.env['project.project'].sudo().browse(id)
-        values = {'project': project}
-
-        return request.render("website_project_e_service.e_service_description_full", values)
+        view = request.render('website_project_e_service.e_service_description_full', {'project': project})
+        return view if project.exists() else self.project_e_services()

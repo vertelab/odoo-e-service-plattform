@@ -77,7 +77,9 @@
                                 <t t-if="not e_service_ids">
                                     <div class="col-12">
                                         <div class="h2 mb-3">No service found.</div>
-                                        <div class="alert alert-info text-center" groups="event.group_event_manager">
+                                        <div
+                                            class="alert alert-info text-center"
+                                            groups="event.group_event_manager">
                                             <p class="m-0">Use the top button '<b>+ New</b>' to create a service.</p>
                                         </div>
                                     </div>
@@ -85,8 +87,22 @@
                                 <!-- List -->
 
                                 <t t-foreach="e_service_ids" t-as="e_service_id">
-                                    <div class="col-md-12" style="display:flex; justify-content: center; align-items: center; border: 1px groove black; height: 70px; border-radius: 5px;margin-bottom: 40px">
-                                        <a t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"  t-attf-class="d-flex align-items-center">
+                                    <div 
+                                        class="col-md-12" 
+                                        style="
+                                            align-items: center; 
+                                            border: 1px groove black; 
+                                            border-radius: 5px;
+                                            display: flex; 
+                                            height: 70px; 
+                                            justify-content: center; 
+                                            margin-bottom: 40px;
+                                        "
+                                    >
+                                        <a 
+                                            t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"
+                                            t-attf-class="d-flex align-items-center"
+                                            >
                                             <h1>
                                                 <t t-esc="e_service_id['e_service_id'].name"/>
                                             </h1>
@@ -98,7 +114,11 @@
                                         <div class="col-md-4" style="margin-bottom: 20px;">
                                             <div class="card" style="padding-left: unset !important">
                                                 <div class="card-img-top p-1 oe_product_image">
-                                                    <a t-attf-href="/e-service/#{ slug(project) }" class="d-block h-100" itemprop="url">
+                                                    <a 
+                                                        t-attf-href="/e-service/#{ slug(project) }"
+                                                        class="d-block h-100" 
+                                                        itemprop="url"
+                                                    >
                                                         <span 
                                                             t-if="project.e_service_icon" 
                                                             t-esc="project.e_service_icon"
