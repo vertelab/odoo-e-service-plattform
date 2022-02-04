@@ -12,14 +12,15 @@ _logger = logging.getLogger(__name__)
 #     _inherit = "res.partner"
 
 
-class Partner(models.TransientModel):
-    _name = "partner.navet.import"
+class NavetImport(models.Model):
+    _name = "navet.import"
 
-    person_number = fields.Char(string='Social Security Number')
-    
-    def action_import_navet_person(self):
-        _logger.warning("Clicky buttony" * 99)
-        pkcs12 = crypto.load_pkcs12(open("/usr/share/odoo-e-service-plattform/partner_navet/navet_certificates/61960e368d4c6.p12", 'rb').read(), b"5761213661378233")
+    name = fields.Char(string="name")
+    key = fields.Char(string="Navet Key")
+
+    def navet_send_request(self, person_number, org_number, ordering_id):
+        _logger.warning("Sending navet request" * 99)
+        pkcs12 = crypto.load_pkcs12(open("/usr/share/odoo-e-service-plattform/partner_navet/navet_certificates/61960e368d4c6.p12", 'rb').read(), bytes(self.key, 'utf-8'))
         cert = crypto.dump_certificate(crypto.FILETYPE_PEM, pkcs12.get_certificate())
         key = crypto.dump_privatekey(crypto.FILETYPE_PEM, pkcs12.get_privatekey())
         with open('/usr/share/odoo-e-service-plattform/partner_navet/cert.pem', 'wb') as f:
@@ -32,7 +33,38 @@ class Partner(models.TransientModel):
         transport = Transport(session=session)
         client = Client('https://www2.test.skatteverket.se:443/na/na_epersondata/V3/personpostXML?wsdl', transport=transport)
         print(client)
-        person = client.service.getData(Bestallning = {'OrgNr': 162021004748, 'BestallningsId': '00000236-FO01-0001'}, PersonId = self.person_number)
+        person = client.service.getData(Bestallning = {'OrgNr': org_number, 'BestallningsId': ordering_id}, PersonId = person_number)
+        return person
+
+class PartnerNavetImport(models.TransientModel):
+    _name = "partner.navet.import"
+
+    person_number = fields.Char(string='Social Security Number')
+    # org_number = fields.Integer(string='Organisational Number', default=162021004748)
+    # ordering_id = fields.Char(string='Ordering Id', default='00000236-FO01-0001')
+
+
+    # def navet_send_request(self):
+    #     _logger.warning("Sending navet request" * 99)
+    #     pkcs12 = crypto.load_pkcs12(open("/usr/share/odoo-e-service-plattform/partner_navet/navet_certificates/61960e368d4c6.p12", 'rb').read(), b"5761213661378233")
+    #     cert = crypto.dump_certificate(crypto.FILETYPE_PEM, pkcs12.get_certificate())
+    #     key = crypto.dump_privatekey(crypto.FILETYPE_PEM, pkcs12.get_privatekey())
+    #     with open('/usr/share/odoo-e-service-plattform/partner_navet/cert.pem', 'wb') as f:
+    #         f.write(cert)
+    #     with open('/usr/share/odoo-e-service-plattform/partner_navet/key.pem', 'wb') as f:
+    #         f.write(key)
+    #     session = Session()
+    #     session.cert = ('/usr/share/odoo-e-service-plattform/partner_navet/cert.pem', '/usr/share/odoo-e-service-plattform/partner_navet/key.pem')
+
+    #     transport = Transport(session=session)
+    #     client = Client('https://www2.test.skatteverket.se:443/na/na_epersondata/V3/personpostXML?wsdl', transport=transport)
+    #     print(client)
+    #     person = client.service.getData(Bestallning = {'OrgNr': self.org_number, 'BestallningsId': self.ordering_id}, PersonId = self.person_number)
+    #     return person
+    
+    def action_import_navet_person(self):
+        _logger.warning("Clicky buttony" * 99)
+        person = self.env.ref('partner_navet.navet_interface').navet_send_request(self.person_number, 162021004748, "00000236-FO01-0001")
         self.env["res.partner"].create({
             "name": f"{person[0]['Personpost']['Namn']['Aviseringsnamn']}",
             "street": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2']}",
@@ -42,3 +74,4 @@ class Partner(models.TransientModel):
             "city": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Postort']}",
             "country_id": self.env["res.country"].search([('name', '=', 'Sweden')])[0].id,
         })
+        

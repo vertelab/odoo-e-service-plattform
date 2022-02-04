@@ -77,7 +77,7 @@
                                     <!--  Gör om till en "Nästa" knapp. Behöver javascript. -->
                                     <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
                                         <div style="width: 200px;" class="s_website_form_label"></div>
-                                        <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send o_default_snippet_text">Submit</a>
+                                        <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send o_default_snippet_text">Next</a>
                                         <span id="s_website_form_result"></span>
                                       </div>
                                     

@@ -1,5 +1,4 @@
 <odoo>
-  <data>
     <record model="ir.ui.view" id="navet_import_wizard">
       <field name="name">navet_import_wizard</field>
       <field name="model">partner.navet.import</field>
@@ -19,7 +18,25 @@
       <field name="binding_model_id" ref="base.model_res_partner"/>
     </record>
 
-
+     <record id="navet_import_form" model="ir.ui.view">
+        <field name="name">navet.import.form</field>
+        <field name="model">navet.import</field>
+        <field name="arch" type="xml">
+          <form>
+            <field name="name"/>
+            <field name="key"/>
+          </form>
+        </field>
+    </record>
+    <record id="navet_import_tree" model="ir.ui.view">
+        <field name="name">navet.import.tree</field>
+        <field name="model">navet.import</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="name"/>
+          </tree>
+        </field>
+    </record>
 
 
     <!-- actions opening views on models -->
@@ -63,5 +80,4 @@
     <menuitem name="Server to list" id="partner_navet" parent="partner_navet.menu_2"
               action="partner_navet.action_server"/>
 -->
-  </data>
 </odoo>
