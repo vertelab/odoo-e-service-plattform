@@ -29,7 +29,7 @@
     'description': """
         14.0.0.0.1 - Initial Development
     """,
-    'depends': ['website', 'project_e_service'],
+    'depends': ['website', 'web_editor', 'project_e_service'],
     'data': [
         'views/assets.xml',
         'views/website_navbar_templates.xml',
