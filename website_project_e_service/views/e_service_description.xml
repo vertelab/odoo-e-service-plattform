@@ -35,10 +35,11 @@
                             />
                         </div>
                     </section>
+                    <div itemprop="description" t-field="project.e_service_form" class="oe_structure oe_empty mt16"/>
                 </div>
-                <t t-if="project.e_service_form">
-                    <div t-field="project.e_service_form" />
-                </t>
+<!--                <t t-if="project.e_service_form">-->
+<!--                    <div t-field="project.e_service_form" />-->
+<!--                </t>-->
             </div>
         </t>
     </template>

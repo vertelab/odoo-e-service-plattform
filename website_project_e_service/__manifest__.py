@@ -35,6 +35,7 @@
         'views/website_navbar_templates.xml',
         'views/e_service_template.xml',
         'views/e_service_description.xml',
+        'views/e_service_snippet.xml',
     ],
     'application': True,
     'installable': True,
