@@ -41,7 +41,7 @@
                     <div itemprop="description" t-field="project.e_service_form" class="oe_structure oe_empty mt16">
                         <div class="alert alert-info" t-ignore="True" role="status">
                             <p>
-                            Put your e-service description here.
+                            Put your form here.
                             </p>
                         </div>
                     </div>
