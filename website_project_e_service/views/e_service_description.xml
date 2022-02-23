@@ -29,13 +29,22 @@
                         </div>
 
                         <div style="margin-bottom:25px">
-                            <span 
-                                t-field="project.e_service_description" 
-                                class="text-truncate"
-                            />
+                            <span t-field="project.e_service_description" class="text-truncate">
+                                <div class="alert alert-info" t-ignore="True" role="status">
+                                    <p>
+                                    Put your e-service description here.
+                                    </p>
+                                </div>
+                            </span>
                         </div>
                     </section>
-                    <div itemprop="description" t-field="project.e_service_form" class="oe_structure oe_empty mt16"/>
+                    <div itemprop="description" t-field="project.e_service_form" class="oe_structure oe_empty mt16">
+                        <div class="alert alert-info" t-ignore="True" role="status">
+                            <p>
+                            Put your e-service description here.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 <!--                <t t-if="project.e_service_form">-->
 <!--                    <div t-field="project.e_service_form" />-->
