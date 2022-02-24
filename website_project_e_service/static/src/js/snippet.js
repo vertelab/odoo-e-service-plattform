@@ -2,8 +2,10 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
     "use strict"; // Start of use strict
 
     require('web.dom_ready');
-    const ajax = require('web.ajax');
-
+    var Dialog = require('web.Dialog');
+    var core = require('web.core');
+    const _t = core._t;
+    
     $('document').ready(function (event) {
         var tabs = $(`ul[role="tablist"] li a[role="tab"]`);
         tabs.each((i, tab) => {
@@ -13,7 +15,7 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                 var next_tab = $(tabs[i + 1])
                 if (next_tab.length > 0) {
                     var next_tab_content = $(tabs[i + 1].attributes.href.textContent);
-                    var button_to_next_tab = $(`a[href="#${tabs[i + 1].id}"]`);
+                    var button_to_next_tab = current_tab_content.find(`div[data-name="Next Button"]>a`);
                     if (button_to_next_tab.length == 1) {
                         button_to_next_tab.on("click", function () {
                             $(".is-invalid").toggleClass("is-invalid");
@@ -26,7 +28,7 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                                     $(requiredTag).find('*[disabled]').each((i, selectTag) => {
                                         if (selectTag.value === requiredTag.value)
                                             $(requiredTag).toggleClass("is-invalid");
-                                    })
+                                    });
                                 };
                             });
                             if ($(".is-invalid").length === 0) { // Check if all required tags have values
@@ -35,15 +37,14 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                                 current_tab_content.toggleClass("active show");
                                 next_tab_content.toggleClass("active show");
                             } else {
-                                alert("Fyll i alla fält med stjärnor");
+                                Dialog.alert(this, _t("Please fill in all required fields"));
                             };
                         });
                     } else if (button_to_next_tab.length > 1) {
                         console.log("Error, more than one button");
                     };
-                }
+                };
             };
         });
-
-    })
-})
+    });
+});
