@@ -46,6 +46,13 @@
             </field>
         </record>
 
+        <record id="menu_e_service" model="website.menu">
+            <field name="name">E-Service</field>
+            <field name="url">/e-services</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">30</field>
+        </record>
+
         <menuitem id="menu_project_e_service_category" action="project_e_service_category_action" parent="project.menu_project_config" sequence="100"/>
     </data>
 </odoo>
