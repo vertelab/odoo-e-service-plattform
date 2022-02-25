@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <data noupdate="1">
+        <record id="navet_interface" model="navet.import">
+            <field name="name">navet</field>
+            <field name="key">5761213661378233</field>
+        </record>
+    </data>
+
+</odoo>
