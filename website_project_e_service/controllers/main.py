@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from dbus import MissingErrorHandlerException
 from odoo import fields, http, _
 from odoo.http import request
@@ -78,5 +77,10 @@ class ProjectEServiceController(http.Controller):
         if '-' in form:
             id = int(form.split('-')[-1])
         project = request.env['project.project'].sudo().browse(id)
-        view = request.render('website_project_e_service.e_service_description_full', {'project': project})
-        return view if project.exists() else self.project_e_services()
+        if not project.exists():
+            return self.project_e_services()
+        if project.require_login and not request.env.context.get('uid'):
+            return request.redirect('/web/login?redirect=/e-service/' + form)
+        _logger.error(f"{request.env.context=}")
+        view = 'website_project_e_service.e_service_description_full'
+        return request.render(view, {'project': project})

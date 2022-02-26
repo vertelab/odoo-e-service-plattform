@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="skolskjuts" model="project.project">
+        <field name="name">Skolskjuts</field>
+        <field name="is_e_service">True</field>
+        <field name="e_service_icon" type="base64" file="website_project_e_service/static/img/skolskjuts.png" />
+        <field name="e_service_form">
+            <![CDATA[
+<section class="s_tabs pt48 pb48" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
+    <div class="container">
+        <div class="s_tabs_main card" id="tabs">
+            <div class="s_tabs_nav card-header">
+                <ul class="nav justify-content-center nav-fill nav-tabs card-header-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav_tabs_link_1" data-toggle="tab" href="#nav_tabs_content_1" role="tab" aria-controls="nav_tabs_content_1" aria-selected="true">Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav_tabs_link_2" data-toggle="tab" href="#nav_tabs_content_2" role="tab" aria-controls="nav_tabs_content_2" aria-selected="false">Vårdnadshavares uppgifter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav_tabs_link_3" data-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">Elevuppgifter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav_tabs_link_4" data-toggle="tab" href="#nav_tabs_content_4" role="tab" aria-controls="nav_tabs_content_4" aria-selected="false">Ansökan</a>
+                    </li>
+                </ul>
+            </div>
+            <section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Form">
+                <div class="container">
+                    <form action="/website_form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-model_name="project.task">
+                        <div class="s_tabs_content tab-content card-body">
+                            <div class="tab-pane fade active show" id="nav_tabs_content_1" role="tabpanel" aria-labelledby="nav_tabs_link_1">
+                                <div class="oe_structure oe_empty">
+                                    <section class="s_text_block pt32 pb32" data-snippet="s_text_block" data-name="Text">
+                                        <div class="container s_allow_columns">
+                                            <div class="row">
+                                                <div class="col-md-12 o_colored_level">
+                                                    <h3>Viktigt att veta innan du ansöker om skolskjuts</h3>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>Alla elever inom grundskolan, ska ansöka om skolskjuts.</li>
+                                                <li>En ansökan ska skickas in även om man har haft skolskjuts sedan
+                                                    tidigare.
+                                                </li>
+                                                <li>Ansökan om skolskjuts kommer behöva göras inför varje nytt läsår.
+                                                </li>
+                                                <li>Skolskjuts gäller mellan en anvisad hållplats i anslutning till elevens
+                                                    hem och skolan vid de tider skoldagen normalt börjar och slutar.</li>
+                                                <li>Skolskjuts anordnas huvudsakligen med upphandlad skolbuss och ordinarie
+                                                    kollektivtrafik. Endast i undantagsfall beviljas skolskjuts med taxi.
+                                                </li>
+                                                <li>Eleven ska vara folkbokförd i kommunen.</li>
+                                                <li>Skolskjuts beviljas inte till vårdnadshavare som bor i annan kommun.
+                                                </li>
+                                                <li>Fyll i ansökan noga för att handläggningen ska gå så snabbt som möjligt.
+                                                </li>
+                                                <li>Det är elevens vårdnadshavare som ska ansöka om skolskjuts för eleven.
+                                                </li>
+                                            </ul>Ansökningsperioden för läsåret 2022-2023 är 1 mars – 31 mars 2022, om du
+                                            skickar in ansökan efter denna period kan ett beslut om skolskjuts inte
+                                            garanteras före skolstart.
+                                        </div>
+                                    </section>
+                                    
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="boolean">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-sm-auto s_website_form_label text-right" style="width: 250px" for="Jag har läst ovanstående information">
+                                                    <span class="s_website_form_label_content">Jag har läst ovanstående information</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="checkbox" class="s_website_form_input" name="Jag har läst ovanstående information" required="true" id="Jag har läst ovanstående information" value="Ja" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="boolean">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-sm-auto s_website_form_label text-right" style="width: 250px" for="Jag har läst kommunens riktlinjer för skolskjuts">
+                                                    <span class="s_website_form_label_content">Jag har läst kommunens riktlinjer för skolskjuts</span>
+                                                    <span class="s_website_form_mark"> *</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="checkbox" class="s_website_form_input" name="Jag har läst kommunens riktlinjer för skolskjuts" required="true" id="Jag har läst kommunens riktlinjer för skolskjuts" value="Ja" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 s_website_form_field_hidden" data-type="char" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-form-label col-sm-auto s_website_form_label text-right" style="width: 250px" for="kund">
+                                                    <span class="s_website_form_label_content">Kund</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                            <span id="s_website_form_result" />
+                                            <div style="width: 200px;" class="s_website_form_label" />
+                                            <a href="#nav_tabs_link_2" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav_tabs_content_2" role="tabpanel" aria-labelledby="nav_tabs_link_2">
+                                <div class="oe_structure oe_empty">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>Vårdnadshavare 1 (uppgiftslämnare)</h3>
+                                            </div>
+                                        </section>
+    
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Namn">
+                                                <span class="s_website_form_label_content">Namn</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Namn" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Namn" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="E-post">
+                                                <span class="s_website_form_label_content">E-post</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="E-post" class="form-control s_website_form_input" type="text" name="email" required="1" placeholder="E-post" />
+                                        </div>
+                                        
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Personnummer">
+                                                <span class="s_website_form_label_content">Personnummer</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Personnummer" class="form-control s_website_form_input" type="text" name="social_sec_nr" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Adress">
+                                                <span class="s_website_form_label_content">Adress</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Adress" class="form-control s_website_form_input" type="text" name="street" required="1" placeholder="Adress" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Postnr">
+                                                <span class="s_website_form_label_content">Postnr</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Postnr" class="form-control s_website_form_input" type="text" name="zip" required="1" placeholder="Postnr" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Ort">
+                                                <span class="s_website_form_label_content">Ort</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Ort" class="form-control s_website_form_input" type="text" name="city" required="1" placeholder="Ort" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Telefon">
+                                                <span class="s_website_form_label_content">Telefon</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Telefon" class="form-control s_website_form_input" type="text" name="Telefon" required="1" placeholder="Telefon" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Mobil">
+                                                <span class="s_website_form_label_content">Mobil</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Mobil" class="form-control s_website_form_input" type="text" name="Mobil" required="1" placeholder="Mobil" />
+                                        </div>
+
+                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>
+                                                    <font style="font-size: 18px;">Vårdnadshavare 2 </font>
+                                                </h3>
+                                            </div>
+                                        </section>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Namn">
+                                                <span class="s_website_form_label_content">Namn</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Namn" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Namn" placeholder="Namn" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 E-post">
+                                                <span class="s_website_form_label_content">E-post</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 E-post" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 E-post" placeholder="E-post" />
+                                        </div>
+                                        
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Personnummer">
+                                                <span class="s_website_form_label_content">Personnummer</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Personnummer" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Personnummer" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Adress">
+                                                <span class="s_website_form_label_content">Adress</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Adress" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Adress" placeholder="Adress" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Postnr">
+                                                <span class="s_website_form_label_content">Postnr</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Postnr" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Postnr" placeholder="Postnr" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Ort">
+                                                <span class="s_website_form_label_content">Ort</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Ort" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Ort" placeholder="Ort" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Telefon">
+                                                <span class="s_website_form_label_content">Telefon</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Telefon" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Telefon" placeholder="Telefon" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Mobil">
+                                                <span class="s_website_form_label_content">Mobil</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Mobil" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Mobil" placeholder="Mobil" />
+                                        </div>
+
+                                        <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                            <span id="s_website_form_result"></span>
+                                            <div style="width: 250px" class="s_website_form_label"></div>
+                                            <a href="#nav_tabs_link_3" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav_tabs_content_3" role="tabpanel" aria-labelledby="nav_tabs_link_3">
+                                <div class="oe_structure oe_empty">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>Elevuppgifter</h3>
+                                                <p>
+                                                    Fyll i samtliga uppgifter om eleven som ansökan gäller. Välj läsår innan skola.
+                                                </p>
+                                            </div>
+                                        </section>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Elevens Namn">
+                                                <span class="s_website_form_label_content">Namn</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Elevens Namn" class="form-control s_website_form_input" type="text" name="Elevens Namn" required="1" placeholder="Namn" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Elevens Personnummer">
+                                                <span class="s_website_form_label_content">Personnummer</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Elevens Personnummer" class="form-control s_website_form_input" type="text" name="Elevens Personnummer" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="many2one" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Läsår">
+                                                <span class="s_website_form_label_content">Läsår</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <select class="form-control s_website_form_input" name="Läsår" id="Läsår" required="1">
+                                                <option disabled="" selected="">Välj läsår</option>
+                                                <option value="2022-2023">2022-2023</option>
+                                                <option value="2023-2024">2023-2024</option>
+                                                <option value="2024-2025">2024-2025</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required pb0" data-type="many2one" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Årskurs">
+                                                <span class="s_website_form_label_content">Årskurs</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <select class="form-control s_website_form_input" name="grade" id="Årskurs" required="1">
+                                                <option disabled="" selected="">Välj årskurs</option>
+                                                <option value="Årskurs 1">Årskurs 1</option>
+                                                <option value="Årskurs 2">Årskurs 2</option>
+                                                <option value="Årskurs 3">Årskurs 3</option>
+                                                <option value="Årskurs 4">Årskurs 4</option>
+                                                <option value="Årskurs 5">Årskurs 5</option>
+                                                <option value="Årskurs 6">Årskurs 6</option>
+                                                <option value="Årskurs 7">Årskurs 7</option>
+                                                <option value="Årskurs 8">Årskurs 8</option>
+                                                <option value="Årskurs 9">Årskurs 9</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="many2one" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Skola">
+                                                <span class="s_website_form_label_content">Skola</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <select class="form-control s_website_form_input" name="Skola" id="Skola" required="1">
+                                                <option disabled="" selected="">Välj skola</option>
+                                                <option value="Skola1">Skola 1</option>
+                                                <option value="Skola1">Skola 2</option>
+                                                <option value="Skola1">Skola 3</option>
+                                                <option value="Skola1">Skola 4</option>
+                                                <option value="Skola1">Skola 5</option>
+                                                <option value="Skola1">Skola 6</option>
+                                            </select>
+                                        </div>
+
+                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>Elevens Folkbokföringsadress</h3>
+                                            </div>
+                                        </section>
+    
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Elevens Adress">
+                                                <span class="s_website_form_label_content">Adress</span>
+                                            </label>
+                                            <input id="Elevens Adress" class="form-control s_website_form_input" type="text" name="Elevens Adress" placeholder="Adress" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Elevens Postnr">
+                                                <span class="s_website_form_label_content">Postnr</span>
+                                            </label>
+                                            <input id="Elevens Postnr" class="form-control s_website_form_input" type="text" name="Elevens Postnr" placeholder="Postnr" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Elevens Ort">
+                                                <span class="s_website_form_label_content">Ort</span>
+                                            </label>
+                                            <input id="Elevens Ort" class="form-control s_website_form_input" type="text" name="Elevens Ort" placeholder="Ort" />
+                                        </div>
+
+                                        <section class="s_text_block pt0 pb24 col-12" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <p>Var vänlig och skriv in adress, årskurs och skola för beräkning av gångavstånd. </p>
+                                            </div>
+                                        </section>
+    
+                                        <div class="form-group s_website_form_field col-12" data-type="boolean" data-name="Field">
+                                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                <label class="col-sm-auto s_website_form_label text-right"  style="width: 250px" for="Ansökan gäller en framtida adress">
+                                                    <span class="s_website_form_label_content">Ansökan gäller en framtida adress</span>
+                                                </label>
+                                                <div class="col-sm">
+                                                    <input type="checkbox" class="s_website_form_input" name="Ansökan gäller en framtida adress" id="Ansökan gäller en framtida adress" value="Ja" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-type="selection" data-name="Field">
+                                            <label class="s_website_form_label " style="width: 250px" for="etvp8cj4g19">
+                                                <span class="s_website_form_label_content">Eleven har en fritidsplats från den här adressen</span>
+                                            </label>
+                                            <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Eleven har en fritidsplats från den här adressen" data-display="vertical">
+                                                <div class="radio col-12">
+                                                    <div class="form-check">
+                                                        <input type="radio" class="s_website_form_input form-check-input" id="etvp8cj4g190" name="Eleven har en fritidsplats från den här adressen" value="Heltid">
+                                                        <label class="form-check-label s_website_form_check_label" for="etvp8cj4g190">Heltid</label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio col-12">
+                                                    <div class="form-check">
+                                                        <input type="radio" class="s_website_form_input form-check-input" id="etvp8cj4g191" name="Eleven har en fritidsplats från den här adressen" value="Deltid">
+                                                        <label class="form-check-label s_website_form_check_label" for="etvp8cj4g191">Deltid</label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio col-12">
+                                                    <div class="form-check">
+                                                        <input type="radio" checked="" class="s_website_form_input form-check-input" id="etvp8cj4g192" name="Eleven har en fritidsplats från den här adressen" value="Nej">
+                                                        <label class="form-check-label s_website_form_check_label" for="etvp8cj4g192">Nej</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom pt40" data-type="selection" data-name="Field">
+                                            <label class="s_website_form_label " style="width: 250px" for="kntb9fhu5k">
+                                                <span class="s_website_form_label_content">Eleven har en annan bostadsadress</span>
+                                            </label>
+                                            <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Eleven har en annan bostadsadress" data-display="vertical">
+                                                <div class="radio col-12">
+                                                    <div class="form-check">
+                                                        <input type="radio" class="s_website_form_input form-check-input" id="7x00hg17hnq0" name="Eleven har en annan bostadsadress" value="Ja">
+                                                        <label class="form-check-label s_website_form_check_label" for="7x00hg17hnq0">Ja</label>
+                                                    </div>
+                                                </div>
+                                                <div class="radio col-12">
+                                                    <div class="form-check">
+                                                        <input type="radio" checked="" class="s_website_form_input form-check-input" id="7x00hg17hnq1" name="Eleven har en annan bostadsadress" value="Nej">
+                                                        <label class="form-check-label s_website_form_check_label" for="7x00hg17hnq1">Nej</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                            <span id="s_website_form_result" />
+                                            <div class="s_website_form_label" style="width: 250px" />
+                                            <a href="#nav_tabs_link_4" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav_tabs_content_4" role="tabpanel" aria-labelledby="nav_tabs_link_4">
+                                <div class="oe_structure oe_empty">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>Ansökan</h3>
+                                            </div>
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Skolskjuts önskas från folkbokföringsadressen" id="teh6le3r1o">
+                                                <label class="col-sm-auto s_website_form_label" for="teh6le3r1o">
+                                                    <span class="s_website_form_label_content">Skolskjuts önskas från folkbokföringsadressen</span>
+                                                </label>
+                                            </div>
+                                        </section>
+                                        <section class="s_text_block col-12 col-lg-6 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>Välj ett färdmedel</h3>
+                                            </div>
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="SL Kort" id="5djs6sk73kn">
+                                                <label class="col-sm-auto s_website_form_label " for="5djs6sk73kn">
+                                                    <span class="s_website_form_label_content">SL Kort</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Särskild kollektivtrafik" id="5djs6sk73mn">
+                                                <label class="col-sm-auto s_website_form_label" for="5djs6sk73mn">
+                                                    <span class="s_website_form_label_content">Särskild kollektivtrafik</span>
+                                                </label>
+                                            </div>
+                                            <div class="container s_allow_columns">
+                                                <h3>Skäl till ansökan</h3>
+                                            </div>
+    
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Särskild kollektivtrafik" id="5djs6sk73mp">
+                                                <label class="col-sm-auto s_website_form_label" for="5djs6sk73mp">
+                                                    <span class="s_website_form_label_content">Avstånd till skolan (F-3: 3 km, 4-6 4 km, 7-9: 5 km)</span>
+                                                </label>
+                                            </div>
+                                        </section>
+                                        <section class="s_text_block col-12 col-lg-6 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>Välj en period</h3>
+                                            </div>
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Hela läsåret" id="qvw0mcoxej">
+                                                <label class="col-sm-auto s_website_form_label" for="qvw0mcoxej">
+                                                    <span class="s_website_form_label_content">Hela läsåret</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group s_website_form_field s_website_form_custom " data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Vinterskolskjuts" id="vh2tl6qvwzi">
+                                                <label class="col-sm-auto s_website_form_label" for="vh2tl6qvwzi">
+                                                    <span class="s_website_form_label_content">Vinterskolskjuts</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Skjuts till/från lovskola" id="7opq0riczz">
+                                                <label class="col-sm-auto s_website_form_label" for="7opq0riczz">
+                                                    <span class="s_website_form_label_content">Skjuts till/från lovskola</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="selection" data-name="Field">
+                                                <label class="s_website_form_label" for="5mtlbsusx94">
+                                                    <span class="s_website_form_label_content">Skolskjuts önskas fr.o.m.</span>
+                                                </label>
+                                                <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Skolskjuts önskas fr.o.m." data-display="horizontal">
+                                                    <div class="radio col-12">
+                                                        <div class="form-check">
+                                                            <input type="radio" checked="" class="s_website_form_input form-check-input" id="r0zh2cjj3p0" name="Skolskjuts önskas fr.o.m." value="Läsårets start">
+                                                            <label class="col-sm-auto form-check-label s_website_form_check_label" for="r0zh2cjj3p0">
+                                                                Läsårets start
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radio col-12">
+                                                        <div class="form-check">
+                                                            <input type="radio" class="s_website_form_input form-check-input" id="r0zh2cjj3p1" name="Skolskjuts önskas fr.o.m." value="Annat datum">
+                                                            <label class="col-sm-auto form-check-label s_website_form_check_label" for="r0zh2cjj3p1">Annat datum</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Submit Button">
+                                                <span id="s_website_form_result"></span>
+                                                <div style="width: 250px" class="s_website_form_label"></div>
+                                                <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send o_default_snippet_text">Submit</a>
+                                            </div>
+                                        </section>
+                                    </div>        
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
+                            <div class="row s_col_no_resize s_col_no_bgcolor">
+                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 250px">
+                                    <span class="s_website_form_label_content" />
+                                </label>
+                                <div class="col-sm">
+                                    <input type="hidden" class="form-control s_website_form_input" name="project_id" value="3" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+            ]]>
+        </field>
+    </record>
+</odoo>

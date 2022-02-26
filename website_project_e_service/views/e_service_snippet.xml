@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="s_e_service_snippet" name="E-Service Form">
-        <section class="s_tabs pt48 pb48 o_colored_level" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
+        <section class="s_tabs pt48 pb48" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
             <div class="container">
                 <div class="s_tabs_main card" id="tabs">
                     <div class="s_tabs_nav card-header">
-                        <ul class="nav nav-tabs card-header-tabs justify-content-center nav-fill" role="tablist">
+                        <ul class="nav justify-content-center nav-fill nav-tabs card-header-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="nav_tabs_link_1" data-toggle="tab" href="#nav_tabs_content_1" role="tab" aria-controls="nav_tabs_content_1" aria-selected="true">Step 1</a>
                             </li>
@@ -16,119 +17,166 @@
                             </li>
                         </ul>
                     </div>
-                    <section class="s_website_form pt16 pb16 o_colored_level" data-vcss="001" data-snippet="s_website_form" data-name="Form">
+                    <section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Form">
                         <div class="container">
                             <form action="/website_form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-model_name="project.task">
-                                <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
-                                    <div class="row s_col_no_resize s_col_no_bgcolor">
-                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 250px">
-                                            <span class="s_website_form_label_content"></span>
-                                        </label>
-                                        <div class="col-sm">
-                                            <input type="hidden" class="form-control s_website_form_input" name="project_id" value=""/>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="s_tabs_content tab-content card-body">
                                     <div class="tab-pane fade active show" id="nav_tabs_content_1" role="tabpanel" aria-labelledby="nav_tabs_link_1">
-                                        <div class="oe_structure col-12 s_website_form_rows row s_col_no_bgcolor">
+                                        <div class="oe_structure oe_empty">
                                             <section class="s_text_block pt32 pb32" data-snippet="s_text_block" data-name="Text">
                                                 <div class="container s_allow_columns">
-                                                    <p class="">Great stories have a <b class="o_default_snippet_text">personality</b>. Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience.</p>
-                                                    <p class="o_default_snippet_text">Great stories are <b class="o_default_snippet_text">for everyone</b> even when only written <b class="o_default_snippet_text">for just one person</b>. If you try to write with a wide, general audience in mind, your story will sound fake and lack emotion. No one will be interested. Write for one person. If it’s genuine for the one, it’s genuine for the rest.</p>
+                                                    <p class="">
+                                                        Great stories have a
+                                                        <b class="o_default_snippet_text">personality</b>
+                                                        . Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience.
+                                                    </p>
+                                                    <p class="o_default_snippet_text">
+                                                        Great stories are
+                                                        <b class="o_default_snippet_text">for everyone</b>
+                                                        even when only written
+                                                        <b class="o_default_snippet_text">for just one person</b>
+                                                        . If you try to write with a wide, general audience in mind, your story will sound fake and lack emotion. No one will be interested. Write for one person. If it's genuine for the one, it's genuine for the rest.
+                                                    </p>
                                                 </div>
                                             </section>
-                                            
-                                            <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom s_website_form_required" data-type="boolean" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class=" col-sm-auto s_website_form_label text-right" style="width: 250px" for="x45qzxfag2">
-                                                        <span class="s_website_form_label_content">I have read the information</span>
-                                                        <span class="s_website_form_mark"> *</span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="I have read the information" required="1" id="x45qzxfag2" />
+
+                                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="boolean">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-sm-auto s_website_form_label text-right" style="width: 250px" for="I have read the information">
+                                                            <span class="s_website_form_label_content">I have read the information</span>
+                                                            <span class="s_website_form_mark"> *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="checkbox" class="s_website_form_input" name="I have read the information" id="I have read the information" required="1" value="Yes" />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            
-                                            <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom s_website_form_required" data-type="boolean" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class=" col-sm-auto s_website_form_label text-right" style="width: 250px" for="bt7saikk5f9">
-                                                        <span class="s_website_form_label_content">I accept the terms</span>
-                                                        <span class="s_website_form_mark"> *</span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input type="checkbox" value="Yes" class="s_website_form_input" name="I accept the terms" required="1" id="bt7saikk5f9" />
+
+                                                <div class="form-group s_website_form_field col-12 s_website_form_custom s_website_form_required" data-name="Field" data-type="boolean">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-sm-auto s_website_form_label text-right" style="width: 250px" for="I accept the terms">
+                                                            <span class="s_website_form_label_content">I accept the terms</span>
+                                                            <span class="s_website_form_mark"> *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="checkbox" class="s_website_form_input" name="I accept the terms" id="I accept the terms" required="1" value="Yes" />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="form-group col-12  text-right" data-name="Next Button">
-                                                <span id="s_website_form_result"></span>
-                                                <div style="width: 250px;" class="s_website_form_label"></div>
-                                                <a href="#nav_tabs_link_2" role="button" class="btn btn-primary btn-lg o_default_snippet_text" contenteditable="true">Next Button</a>
-                                            </div>
+                                                <div class="form-group s_website_form_field col-12 s_website_form_field_hidden" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label col-sm-auto s_website_form_label text-right" style="width: 250px" for="customer">
+                                                            <span class="s_website_form_label_content">Customer</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="customer" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
 
+                                                <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                                    <span id="s_website_form_result" />
+                                                    <div class="s_website_form_label" style="width: 250px" />
+                                                    <a href="#nav_tabs_link_2" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Next Button</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="tab-pane fade" id="nav_tabs_content_2" role="tabpanel" aria-labelledby="nav_tabs_link_2">
-                                        <div class="oe_structure col-12 s_website_form_rows row s_col_no_bgcolor">
-
-                                            <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label text-right" style="width: 250px" for="ec8v7uk0kuf">
+                                        <div class="oe_structure oe_empty">
+                                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label" style="width: 250px" for="name">
                                                         <span class="s_website_form_label_content">Name</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <div class="col-sm">
-                                                        <input type="text" class="form-control s_website_form_input" name="name" required="1" placeholder="Name" id="ec8v7uk0kuf" />
-                                                    </div>
+                                                    <input id="name" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Name" />
                                                 </div>
-                                            </div>
 
-                                            <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label text-right" style="width: 250px" for="n3lqjn6wkxi">
-                                                        <span class="s_website_form_label_content">Last Name</span>
+                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label" style="width: 250px" for="email">
+                                                        <span class="s_website_form_label_content">E-mail</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <div class="col-sm">
-                                                        <input type="text" class="form-control s_website_form_input" name="Last Name" required="1" placeholder="Last Name" id="n3lqjn6wkxi" />
-                                                    </div>
+                                                    <input id="email" class="form-control s_website_form_input" type="text" name="email" required="1" placeholder="E-mail" />
+                                                </div>
+
+                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label" style="width: 250px" for="social_sec_nr">
+                                                        <span class="s_website_form_label_content">Social Security No</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <input id="social_sec_nr" class="form-control s_website_form_input" type="text" name="social_sec_nr" required="1" placeholder="Social Security No" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
+                                                </div>
+
+                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label" style="width: 250px" for="street">
+                                                        <span class="s_website_form_label_content">Street</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <input id="street" class="form-control s_website_form_input" type="text" name="street" required="1" placeholder="Street" />
+                                                </div>
+
+                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label" style="width: 250px" for="zip">
+                                                        <span class="s_website_form_label_content">Zip</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <input id="zip" class="form-control s_website_form_input" type="text" name="zip" required="1" placeholder="Zip" />
+                                                </div>
+
+                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                                    <label class="s_website_form_label" style="width: 250px" for="city">
+                                                        <span class="s_website_form_label_content">City</span>
+                                                        <span class="s_website_form_mark"> *</span>
+                                                    </label>
+                                                    <input id="city" class="form-control s_website_form_input" type="text" name="city" required="1" placeholder="City" />
+                                                </div>
+
+                                                <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                                    <span id="s_website_form_result"></span>
+                                                    <div style="width: 250px" class="s_website_form_label"></div>
+                                                    <a href="#nav_tabs_link_3" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Next Button</a>
                                                 </div>
                                             </div>
-
-                                            <div class="form-group col-12 text-right" data-name="Next Button">
-                                                <span id="s_website_form_result"></span>
-                                                <div style="width: 250px;" class="s_website_form_label"></div>
-                                                <a href="#nav_tabs_link_3" role="button" class="btn btn-primary btn-lg o_default_snippet_text" contenteditable="true">Next Button</a>
-                                            </div>
-
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="nav_tabs_content_3" role="tabpanel" aria-labelledby="nav_tabs_content_3">
-                                        <div class="oe_structure col-12 s_website_form_rows row s_col_no_bgcolor">
-
-                                            <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
-                                                <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                    <label class="col-form-label col-sm-auto s_website_form_label text-right" style="width: 250px" for="gnoaga9be9">
-                                                        <span class="s_website_form_label_content">Email</span>
-                                                        <span class="s_website_form_mark"> *</span>
-                                                    </label>
-                                                    <div class="col-sm">
-                                                        <input type="text" class="form-control s_website_form_input" name="Email" required="1" placeholder="Email" id="gnoaga9be9" />
+                                    <div class="tab-pane fade" id="nav_tabs_content_3" role="tabpanel" aria-labelledby="nav_tabs_link_3">
+                                        <div class="oe_structure oe_empty">
+                                            <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_required" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label col-sm-auto s_website_form_label text-right" style="width: 250px" for="Example input">
+                                                            <span class="s_website_form_label_content">Example input</span>
+                                                            <span class="s_website_form_mark"> *</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input type="text" class="form-control s_website_form_input" name="Example input" required="1" placeholder="Example input" id="Example input" />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            
-                                            <div class="form-group ml-auto s_website_form_submit" data-name="Submit Button">
-                                                <span id="s_website_form_result"></span>
-                                                <div style="width: 250px;" class="s_website_form_label"></div>
-                                                <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send o_default_snippet_text">Submit</a>
-                                            </div>
 
+                                                <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Submit Button">
+                                                    <span id="s_website_form_result"></span>
+                                                    <div style="width: 250px" class="s_website_form_label"></div>
+                                                    <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send o_default_snippet_text">Submit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
+                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                        <label class="col-form-label col-sm-auto s_website_form_label " style="width: 250px">
+                                            <span class="s_website_form_label_content"></span>
+                                        </label>
+                                        <div class="col-sm">
+                                            <input type="hidden" class="form-control s_website_form_input" name="project_id" value="3" />
                                         </div>
                                     </div>
                                 </div>
@@ -138,13 +186,11 @@
                 </div>
             </div>
         </section>
-
-
     </template>
 
     <template id="e_service_static_snippet" name="Snippets" inherit_id="website.snippets">
         <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
-            <t t-snippet="website_project_e_service.s_e_service_snippet" t-thumbnail="/web/image/website.s_product_catalog_default_image"/>
+            <t t-snippet="website_project_e_service.s_e_service_snippet" t-thumbnail="/web/image/website.s_product_catalog_default_image" />
         </xpath>
     </template>
 </odoo>
