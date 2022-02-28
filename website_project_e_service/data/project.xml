@@ -12,13 +12,19 @@
             <div class="s_tabs_nav card-header">
                 <ul class="nav justify-content-center nav-fill nav-tabs card-header-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="nav_tabs_link_1" data-toggle="tab" href="#nav_tabs_content_1" role="tab" aria-controls="nav_tabs_content_1" aria-selected="true">Information</a>
+                        <a class="nav-link active" id="nav_tabs_link_1" data-toggle="tab" href="#nav_tabs_content_1" role="tab" aria-controls="nav_tabs_content_1" aria-selected="true">Information
+                            <div class="outline"/><div class="arrow"/>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="nav_tabs_link_2" data-toggle="tab" href="#nav_tabs_content_2" role="tab" aria-controls="nav_tabs_content_2" aria-selected="false">Vårdnadshavares uppgifter</a>
+                        <a class="nav-link" id="nav_tabs_link_2" data-toggle="tab" href="#nav_tabs_content_2" role="tab" aria-controls="nav_tabs_content_2" aria-selected="false">Vårdnadshavares uppgifter
+                            <div class="outline"/><div class="arrow"/>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="nav_tabs_link_3" data-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">Elevuppgifter</a>
+                        <a class="nav-link" id="nav_tabs_link_3" data-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">Elevuppgifter
+                            <div class="outline"/><div class="arrow"/>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="nav_tabs_link_4" data-toggle="tab" href="#nav_tabs_content_4" role="tab" aria-controls="nav_tabs_content_4" aria-selected="false">Ansökan</a>
