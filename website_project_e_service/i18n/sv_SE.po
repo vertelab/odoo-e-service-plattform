@@ -1,0 +1,826 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_project_e_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20220205\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-26 22:04+0000\n"
+"PO-Revision-Date: 2022-02-26 23:32+0100\n"
+"Last-Translator: Han Wong <han.wong@vertel.se>\n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "2022-2023"
+msgstr "2022-2023"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "2023-2024"
+msgstr "2023-2024"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "2024-2025"
+msgstr "2024-2025"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<font style=\"font-size: 18px;\">Vårdnadshavare 2 </font>"
+msgstr "<font style=\"font-size: 18px;\">Vårdnadshavare 2 </font>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.index_topbar
+msgid "<span class=\"navbar-brand h4 my-0 mr-auto\">All Services</span>"
+msgstr "<span class=\"navbar-brand h4 my-0 mr-auto\">Alla tjänster</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Adress</span>"
+msgstr "<span class=\"s_website_form_label_content\">Adress</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Adress</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Adress</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Ansökan gäller en framtida adress</span>"
+msgstr "<span class=\"s_website_form_label_content\">Ansökan gäller en framtida adress</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Avstånd till skolan (F-3: 3 km, 4-6 4 km, 7-9: 5 km)</span>"
+msgstr "<span class=\"s_website_form_label_content\">Avstånd till skolan (F-3: 3 km, 4-6 4 km, 7-9: 5 km)</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">City</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Ort</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "<span class=\"s_website_form_label_content\">Customer</span>"
+msgstr "<span class=\"s_website_form_label_content\">Kund</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">E-mail</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">E-post</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">E-post</span>"
+msgstr "<span class=\"s_website_form_label_content\">E-post</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">E-post</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">E-post</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Eleven har en annan bostadsadress</span>"
+msgstr "<span class=\"s_website_form_label_content\">Eleven har en annan bostadsadress</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Eleven har en fritidsplats från den här adressen</span>"
+msgstr "<span class=\"s_website_form_label_content\">Eleven har en fritidsplats från den här adressen</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">Example input</span>\n"
+"                                                            <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Exempel</span>\n"
+"                                                            <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Hela läsåret</span>"
+msgstr "<span class=\"s_website_form_label_content\">Hela läsåret</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">I accept the terms</span>\n"
+"                                                            <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Jag godkänner villkoren</span>\n"
+"                                                            <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">I have read the information</span>\n"
+"                                                            <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Jag har läst informationen</span>\n"
+"                                                            <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Jag har läst kommunens riktlinjer för skolskjuts</span>\n"
+"                                                    <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Jag har läst kommunens riktlinjer för skolskjuts</span>\n"
+"                                                    <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Jag har läst ovanstående information</span>\n"
+"                                                    <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Jag har läst ovanstående information</span>\n"
+"                                                    <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Kund</span>"
+msgstr "<span class=\"s_website_form_label_content\">Kund</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Läsår</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Läsår</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Mobil</span>"
+msgstr "<span class=\"s_website_form_label_content\">Mobil</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Mobil</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Mobil</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">Name</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Name</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Namn</span>"
+msgstr "<span class=\"s_website_form_label_content\">Namn</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Namn</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Namn</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Ort</span>"
+msgstr "<span class=\"s_website_form_label_content\">Ort</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Ort</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Ort</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Personnummer</span>"
+msgstr "<span class=\"s_website_form_label_content\">Personnummer</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Personnummer</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Personnummer</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Postnr</span>"
+msgstr "<span class=\"s_website_form_label_content\">Postnr</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Postnr</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Postnr</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">SL Kort</span>"
+msgstr "<span class=\"s_website_form_label_content\">SL Kort</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Skjuts till/från lovskola</span>"
+msgstr "<span class=\"s_website_form_label_content\">Skjuts till/från lovskola</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Skola</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Skola</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Skolskjuts önskas fr.o.m.</span>"
+msgstr "<span class=\"s_website_form_label_content\">Skolskjuts önskas fr.o.m.</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Skolskjuts önskas från folkbokföringsadressen</span>"
+msgstr "<span class=\"s_website_form_label_content\">Skolskjuts önskas från folkbokföringsadressen</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">Social Security No</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Personnummer</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">Street</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Adress</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Särskild kollektivtrafik</span>"
+msgstr "<span class=\"s_website_form_label_content\">Särskild kollektivtrafik</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Telefon</span>"
+msgstr "<span class=\"s_website_form_label_content\">Telefon</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Telefon</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Telefon</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "<span class=\"s_website_form_label_content\">Vinterskolskjuts</span>"
+msgstr "<span class=\"s_website_form_label_content\">Vinterskolskjuts</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"<span class=\"s_website_form_label_content\">Zip</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Postnr</span>\n"
+"                                                        <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"<span class=\"s_website_form_label_content\">Årskurs</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Årskurs</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.index
+msgid "<span style=\"color: #FFFFFF\">View Service</span>"
+msgstr "<span style=\"color: #FFFFFF\">Se tjänst</span>"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Adress"
+msgstr "Adress"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.index_topbar
+msgid "All Categories"
+msgstr "Alla kategorier"
+
+#. module: website_project_e_service
+#: code:addons/website_project_e_service/models/project.py:0
+#, python-format
+msgid "All fields are required !"
+msgstr "Alla fält ska fyllas i !"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Alla elever inom grundskolan, ska ansöka om skolskjuts."
+msgstr "Alla elever inom grundskolan, ska ansöka om skolskjuts."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Annat datum"
+msgstr "Annat datum"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Ansökan"
+msgstr "Ansökan"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Ansökan om skolskjuts kommer behöva göras inför varje nytt läsår."
+msgstr "Ansökan om skolskjuts kommer behöva göras inför varje nytt läsår."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"Ansökningsperioden för läsåret 2022-2023 är 1 mars – 31 mars 2022, om du\n"
+"                                            skickar in ansökan efter denna period kan ett beslut om skolskjuts inte\n"
+"                                            garanteras före skolstart."
+msgstr ""
+"Ansökningsperioden för läsåret 2022-2023 är 1 mars – 31 mars 2022, om du\n"
+"                                            skickar in ansökan efter denna period kan ett beslut om skolskjuts inte\n"
+"                                            garanteras före skolstart."
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "City"
+msgstr "Ort"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Deltid"
+msgstr "Deltid"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Det är elevens vårdnadshavare som ska ansöka om skolskjuts för eleven."
+msgstr "Det är elevens vårdnadshavare som ska ansöka om skolskjuts för eleven."
+
+#. module: website_project_e_service
+#: model:ir.model.fields,field_description:website_project_e_service.field_project_project__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.e_service_user_navbar
+msgid "E-Service"
+msgstr "E-tjänst"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "E-mail"
+msgstr "E-post"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "E-post"
+msgstr "E-post"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.e_service_description_full
+msgid "E-service Name"
+msgstr "E-tjänst Namn"
+
+#. module: website_project_e_service
+#: model:website.menu,name:website_project_e_service.menu_e_services
+msgid "E-services"
+msgstr "E-tjänster"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Eleven ska vara folkbokförd i kommunen."
+msgstr "Eleven ska vara folkbokförd i kommunen."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Elevens Folkbokföringsadress"
+msgstr "Elevens Folkbokföringsadress"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Elevuppgifter"
+msgstr "Elevuppgifter"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"En ansökan ska skickas in även om man har haft skolskjuts sedan\n"
+"                                                    tidigare."
+msgstr ""
+"En ansökan ska skickas in även om man har haft skolskjuts sedan\n"
+"                                                    tidigare."
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Example input"
+msgstr "Exempel"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Fyll i ansökan noga för att handläggningen ska gå så snabbt som möjligt."
+msgstr "Fyll i ansökan noga för att handläggningen ska gå så snabbt som möjligt."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Fyll i samtliga uppgifter om eleven som ansökan gäller. Välj läsår innan skola."
+msgstr "Fyll i samtliga uppgifter om eleven som ansökan gäller. Välj läsår innan skola."
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"Great stories are\n"
+"                                                        <b class=\"o_default_snippet_text\">for everyone</b>\n"
+"                                                        even when only written\n"
+"                                                        <b class=\"o_default_snippet_text\">for just one person</b>\n"
+"                                                        . If you try to write with a wide, general audience in mind, your story will sound fake and lack emotion. No one will be interested. Write for one person. If it's genuine for the one, it's genuine for the rest."
+msgstr ""
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid ""
+"Great stories have a\n"
+"                                                        <b class=\"o_default_snippet_text\">personality</b>\n"
+"                                                        . Consider telling a great story that provides personality. Writing a story with personality for potential clients will assist with making a relationship connection. This shows up in small quirks like word choices or phrases. Write from your point of view, not from someone else's experience."
+msgstr ""
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Gå vidare"
+msgstr "Gå vidare"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Heltid"
+msgstr "Heltid"
+
+#. module: website_project_e_service
+#: model:ir.model.fields,field_description:website_project_e_service.field_project_project__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Information"
+msgstr "Information"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Ja"
+msgstr "Ja"
+
+#. module: website_project_e_service
+#: model:ir.model.fields,field_description:website_project_e_service.field_project_project____last_update
+msgid "Last Modified on"
+msgstr "Senast redigerad"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Läsårets start"
+msgstr "Läsårets start"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Mobil"
+msgstr "Mobil"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Name"
+msgstr "Namn"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Namn"
+msgstr "Namn"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Nej"
+msgstr "Nej"
+
+#. module: website_project_e_service
+#. openerp-web
+#: code:addons/website_project_e_service/static/src/js/e_service.js:0
+#, python-format
+msgid "New E-Service"
+msgstr "Ny E-tjänst"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Next Button"
+msgstr "Nästa"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.index
+msgid "No service found."
+msgstr "Ingen tjänst hittades."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Ort"
+msgstr "Ort"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Personnummer (ÅÅÅÅMMDD-XXXX)"
+msgstr "Personnummer (ÅÅÅÅMMDD-XXXX)"
+
+#. module: website_project_e_service
+#. openerp-web
+#: code:addons/website_project_e_service/static/src/js/snippet.js:0
+#, python-format
+msgid "Please fill in all required fields"
+msgstr "Var god fyll i alla obligatoriska fält"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Postnr"
+msgstr "Postnr"
+
+#. module: website_project_e_service
+#: model:ir.model,name:website_project_e_service.model_project_project
+msgid "Project"
+msgstr "Projekt"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.e_service_description_full
+msgid "Put your e-service description here."
+msgstr "Placera din e-tjänst beskrivning här."
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.e_service_description_full
+msgid "Put your form here."
+msgstr "Placera ditt formulär här."
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.index_topbar
+msgid "Search e-service..."
+msgstr "Sök e-tjänst..."
+
+#. module: website_project_e_service
+#. openerp-web
+#: code:addons/website_project_e_service/static/src/js/e_service.js:0
+#, python-format
+msgid "Select Service"
+msgstr "Välj tjänst"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skola 1"
+msgstr "Skola 1"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skola 2"
+msgstr "Skola 2"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skola 3"
+msgstr "Skola 3"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skola 4"
+msgstr "Skola 4"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skola 5"
+msgstr "Skola 5"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skola 6"
+msgstr "Skola 6"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"Skolskjuts anordnas huvudsakligen med upphandlad skolbuss och ordinarie\n"
+"                                                    kollektivtrafik. Endast i undantagsfall beviljas skolskjuts med taxi."
+msgstr ""
+"Skolskjuts anordnas huvudsakligen med upphandlad skolbuss och ordinarie\n"
+"                                                    kollektivtrafik. Endast i undantagsfall beviljas skolskjuts med taxi."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skolskjuts beviljas inte till vårdnadshavare som bor i annan kommun."
+msgstr "Skolskjuts beviljas inte till vårdnadshavare som bor i annan kommun."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid ""
+"Skolskjuts gäller mellan en anvisad hållplats i anslutning till elevens\n"
+"                                                    hem och skolan vid de tider skoldagen normalt börjar och slutar."
+msgstr ""
+"Skolskjuts gäller mellan en anvisad hållplats i anslutning till elevens\n"
+"                                                    hem och skolan vid de tider skoldagen normalt börjar och slutar."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Skäl till ansökan"
+msgstr "Skäl till ansökan"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Social Security No"
+msgstr "Personnummer"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Step 1"
+msgstr "Steg 1"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Step 2"
+msgstr "Steg 2"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Step 3"
+msgstr "Steg 3"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Street"
+msgstr "Adress"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Submit"
+msgstr "Skicka"
+
+#. module: website_project_e_service
+#: model:project.project,label_tasks:website_project_e_service.skolskjuts
+msgid "Tasks"
+msgstr "Aktiviteter"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Telefon"
+msgstr "Telefon"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.index
+msgid ""
+"Use the top button '\n"
+"                                                <b>+ New</b>\n"
+"                                                ' to create a service."
+msgstr ""
+"Använd knappen högst upp '\n"
+"                                                <b>+ Ny</b>\n"
+"                                                ' för att skapa en tjänst."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Var vänlig och skriv in adress, årskurs och skola för beräkning av gångavstånd."
+msgstr "Var vänlig och skriv in adress, årskurs och skola för beräkning av gångavstånd."
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Viktigt att veta innan du ansöker om skolskjuts"
+msgstr "Viktigt att veta innan du ansöker om skolskjuts"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Välj en period"
+msgstr "Välj en period"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Välj ett färdmedel"
+msgstr "Välj ett färdmedel"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Välj läsår"
+msgstr "Välj läsår"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Välj skola"
+msgstr "Välj skola"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Välj årskurs"
+msgstr "Välj årskurs"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Vårdnadshavare 1 (uppgiftslämnare)"
+msgstr "Vårdnadshavare 1 (uppgiftslämnare)"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Vårdnadshavares uppgifter"
+msgstr "Vårdnadshavares uppgifter"
+
+#. module: website_project_e_service
+#: model_terms:ir.ui.view,arch_db:website_project_e_service.s_e_service_snippet
+msgid "Zip"
+msgstr "Postnr"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 1"
+msgstr "Årskurs 1"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 2"
+msgstr "Årskurs 2"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 3"
+msgstr "Årskurs 3"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 4"
+msgstr "Årskurs 4"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 5"
+msgstr "Årskurs 5"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 6"
+msgstr "Årskurs 6"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 7"
+msgstr "Årskurs 7"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 8"
+msgstr "Årskurs 8"
+
+#. module: website_project_e_service
+#: model_terms:project.project,e_service_form:website_project_e_service.skolskjuts
+msgid "Årskurs 9"
+msgstr "Årskurs 9"

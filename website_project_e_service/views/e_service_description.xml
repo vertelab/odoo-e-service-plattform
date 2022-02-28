@@ -1,36 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Event - Description -->
     <template id="e_service_description_full" name="E-Service Description" track="1">
         <t t-call="website.layout">
             <div id="wrap" class="o_wevent_index">
                 <!-- Topbar -->
-                <t t-call="website_project_e_service.index_topbar"/>
+                <t t-call="website_project_e_service.index_topbar" />
+
                 <!-- Drag/Drop Area -->
-                <div id="oe_structure_we_index_1" class="oe_structure oe_empty"/>
+                <div id="oe_structure_we_index_1" class="oe_structure oe_empty" />
 
                 <!-- Content -->
                 <div class="container">
                     <section>
-                        <t t-if="project.e_service_icon">
-                            <div 
-                                t-esc="project.e_service_icon" 
-                                t-options="{'widget': 'image', 'itemprop': 'image'}" 
-                                class="d-flex h-100 justify-content-center align-items-center"
-                                />
-                        </t>
+                        <!-- <img t-if="project.e_service_icon" class="img-fluid" t-att-src="image_data_uri(project.e_service_icon)" /> -->
                         <div class="container d-flex flex-column flex-grow-1 justify-content-around">
-                            <div class="">
-                                <h1 
-                                    t-field="project.name" 
-                                    class="text-truncate"
-                                    placeholder="E-service Name" 
-                                />
-                            </div>
+                            <h1 class="text-truncate" placeholder="E-service Name" t-field="project.name" />
                         </div>
 
                         <div style="margin-bottom:25px">
-                            <span t-field="project.e_service_description" class="text-truncate">
-                                <div class="alert alert-info" t-ignore="True" role="status">
+                            <span class="text-truncate" t-field="project.e_service_description">
+                                <div class="alert alert-info" role="status" t-ignore="True">
                                     <p>
                                     Put your e-service description here.
                                     </p>
@@ -38,17 +28,15 @@
                             </span>
                         </div>
                     </section>
-                    <div itemprop="description" t-field="project.e_service_form" class="oe_structure oe_empty mt16">
-                        <div class="alert alert-info" t-ignore="True" role="status">
+
+                    <div class="oe_structure oe_empty mt16" itemprop="description" t-field="project.e_service_form">
+                        <div class="alert alert-info" role="status" t-ignore="True">
                             <p>
                             Put your form here.
                             </p>
                         </div>
                     </div>
                 </div>
-<!--                <t t-if="project.e_service_form">-->
-<!--                    <div t-field="project.e_service_form" />-->
-<!--                </t>-->
             </div>
         </t>
     </template>

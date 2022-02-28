@@ -1,16 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="e_service_search_box" inherit_id="website.website_search_box" primary="True">
         <xpath expr="//div[@role='search']" position="replace">
-            <form t-attf-class="o_wevent_event_searchbar_form o_wait_lazy_js w-100 my-1 my-lg-0 #{_classes}"
-                  t-att-action="action if action else '/e-services'" method="get">
-                <t t-set="search" t-value="search or _searches and _searches['search']"/>
-                <t t-set="placeholder" t-value="placeholder or _placeholder"/>
+            <form t-attf-class="o_wevent_event_searchbar_form o_wait_lazy_js w-100 my-1 my-lg-0 #{_classes}" t-att-action="action if action else '/e-services'" method="get">
+                <t t-set="search" t-value="search or _searches and _searches['search']" />
+                <t t-set="placeholder" t-value="placeholder or _placeholder" />
                 <t>$0</t>
                 <t t-foreach="_searches" t-as="search">
-                    <input t-if="search != 'search' and search_value != 'all'" type="hidden"
-                        t-att-name="search" t-att-value="search_value"/>
+                    <input type="hidden" t-if="search != 'search' and search_value != 'all'" t-att-name="search" t-att-value="search_value" />
                 </t>
-                <t t-raw="0"/>
+                <t t-raw="0" />
             </form>
         </xpath>
     </template>
@@ -26,24 +25,22 @@
 
                         <a class="btn btn-secondary btn-block o_download_btn" t-attf-href="/download/e-service/#{project.id}" title="Download" style="color: white !important;width: 30%; !important;margin-left: 15px;"><i class="fa fa-download"/> Download</a>
                     </div>
+
                     <div class="d-flex flex-column flex-sm-row justify-content-end w-100">
                         <div class="d-flex align-items-center flex-wrap pl-sm-3 pr-0">
                             <ul class="o_wevent_index_topbar_filters nav">
                                 <li class="nav-item dropdown mr-2 my-1">
-                                    <a href="#" role="button" class="btn dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-map-marker"/>
-                                        <t t-if="current_e_category" t-esc="current_e_category.name"/>
+                                    <a href="#" class="btn dropdown-toggle" role="button" data-toggle="dropdown">
+                                        <i class="fa fa-map-marker" />
+                                        <t t-if="current_e_category" t-esc="current_e_category.name" />
                                         <t t-else="">All Categories</t>
                                     </a>
                                     <div class="dropdown-menu">
                                         <t t-foreach="e_service_ids" t-as="e_service_id">
                                             <t t-if="e_service_id['project_ids']">
-                                                <a 
-                                                    t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"
-                                                    t-attf-class="dropdown-item d-flex align-items-center justify-content-between {searches.get('e_category') == str(e_category['e_category_id'] and e_service_id['e_service_id'].id) and 'active'}"
-                                                >
-                                                    <t t-esc="e_service_id['e_service_id'].name"/>
-                                                    <span t-esc="len(e_service_id['project_ids'])" class="badge badge-pill badge-primary ml-auto"/>
+                                                <a t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)" t-attf-class="dropdown-item d-flex align-items-center justify-content-between {searches.get('e_category') == str(e_category['e_category_id'] and e_service_id['e_service_id'].id) and 'active'}">
+                                                    <t t-esc="e_service_id['e_service_id'].name" />
+                                                    <span class="badge badge-pill badge-primary ml-auto" t-esc="len(e_service_id['project_ids'])" />
                                                 </a>
                                             </t>
                                         </t>
@@ -53,7 +50,7 @@
                         </div>
                         <div class="d-flex align-items-center flex-wrap pl-sm-3 pr-0">
                             <t t-call="website_project_e_service.e_service_search_box">
-                                <t t-set="_searches" t-value="searches"/>
+                                <t t-set="_searches" t-value="searches" />
                                 <t t-set="_placeholder">Search e-service...</t>
                             </t>
                         </div>
@@ -67,9 +64,9 @@
         <t t-call="website.layout">
             <div id="wrap" class="o_wevent_index">
                 <!-- Topbar -->
-                <t t-call="website_project_e_service.index_topbar"/>
+                <t t-call="website_project_e_service.index_topbar" />
                 <!-- Drag/Drop Area -->
-                <div id="oe_structure_we_index_1" class="oe_structure oe_empty"/>
+                <div id="oe_structure_we_index_1" class="oe_structure oe_empty" />
                 <!-- Content -->
                 <div class="container" style="margin-top:25px">
                     <div class="row">
@@ -79,34 +76,22 @@
                                 <t t-if="not e_service_ids">
                                     <div class="col-12">
                                         <div class="h2 mb-3">No service found.</div>
-                                        <div
-                                            class="alert alert-info text-center"
-                                            groups="event.group_event_manager">
-                                            <p class="m-0">Use the top button '<b>+ New</b>' to create a service.</p>
+                                        <div class="alert alert-info text-center" groups="event.group_event_manager">
+                                            <p class="m-0">
+                                                Use the top button '
+                                                <b>+ New</b>
+                                                ' to create a service.
+                                            </p>
                                         </div>
                                     </div>
                                 </t>
-                                <!-- List -->
 
+                                <!-- List -->
                                 <t t-foreach="e_service_ids" t-as="e_service_id">
-                                    <div 
-                                        class="col-md-12" 
-                                        style="
-                                            align-items: center; 
-                                            border: 1px groove black; 
-                                            border-radius: 5px;
-                                            display: flex; 
-                                            height: 70px; 
-                                            justify-content: center; 
-                                            margin-bottom: 40px;
-                                        "
-                                    >
-                                        <a 
-                                            t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)"
-                                            t-attf-class="d-flex align-items-center"
-                                            >
+                                    <div class="col-md-12" style="align-items: center; border: 1px groove black; border-radius: 5px; display: flex; height: 70px; justify-content: center; margin-bottom: 40px;">
+                                        <a t-att-href="keep('/e-services', e_category=e_service_id['e_service_id'].id)" t-attf-class="d-flex align-items-center">
                                             <h1>
-                                                <t t-esc="e_service_id['e_service_id'].name"/>
+                                                <t t-esc="e_service_id['e_service_id'].name" />
                                             </h1>
                                         </a>
 
@@ -116,25 +101,16 @@
                                         <div class="col-md-4" style="margin-bottom: 20px;">
                                             <div class="card" style="padding-left: unset !important">
                                                 <div class="card-img-top p-1 oe_product_image">
-                                                    <a 
-                                                        t-attf-href="/e-service/#{ slug(project) }"
-                                                        class="d-block h-100" 
-                                                        itemprop="url"
-                                                    >
-                                                        <span 
-                                                            t-if="project.e_service_icon" 
-                                                            t-esc="project.e_service_icon"
-                                                            t-options="{'widget': 'image', 'itemprop': 'image'}"
-                                                            class="d-flex h-100 justify-content-center align-items-center"
-                                                        />
+                                                    <a class="d-block h-100" t-attf-href="/e-service/#{ slug(project) }" itemprop="url">
+                                                        <img class="img-fluid" t-if="project.e_service_icon" t-att-src="image_data_uri(project.e_service_icon)" />
                                                     </a>
                                                 </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">
-                                                        <span t-field="project.name"/>
+                                                        <span t-field="project.name" />
                                                     </h5>
                                                     <p class="card-text">
-                                                        <span t-field="project.teaser"/>
+                                                        <span t-field="project.teaser" />
                                                     </p>
                                                 </div>
                                                 <a t-attf-href="/e-service/#{ slug(project) }">
@@ -145,18 +121,19 @@
                                             </div>
                                         </div>
                                     </t>
-                                    <div class="col-md-12" style="padding-left: unset !important;margin-top: 40px;">
-                                    </div>
+
+                                    <div class="col-md-12" style="padding-left: unset !important; margin-top: 40px;" />
                                 </t>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="oe_structure_we_index_2" class="oe_structure oe_empty"/>
+                <div id="oe_structure_we_index_2" class="oe_structure oe_empty" />
             </div>
+
             <!-- Pager -->
             <div class="form-inline justify-content-center my-3">
-                <t t-call="website.pager"/>
+                <t t-call="website.pager" />
             </div>
         </t>
     </template>

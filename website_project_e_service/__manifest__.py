@@ -24,13 +24,18 @@
     'summary': 'To be able to create e-service from website',
     'author': 'Vertel AB',
     'category': 'Project',
-    'version': '14.0.0.0.1',
+    'version': '14.0.0.1.0',
     'website': 'https://vertel.se',
     'description': """
+        14.0.0.1.0 - Add Skolskjuts-form
         14.0.0.0.1 - Initial Development
     """,
-    'depends': ['website', 'web_editor', 'project_e_service'],
+    'depends': ['project_e_service', 'web_editor', 'website'],
     'data': [
+        'data/project.xml',
+        'data/website_menu.xml',
+        'data/e_service.category.csv',
+        'data/project.e_service.category.csv',
         'views/assets.xml',
         'views/website_navbar_templates.xml',
         'views/e_service_template.xml',

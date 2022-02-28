@@ -1,11 +1,11 @@
-from odoo import models, api, fields, _
+# -*- coding: utf-8 -*-
+from odoo import _, api, fields, models
 from odoo.tools.translate import html_translate
 from odoo.tools import html2plaintext
 
 
 class Project(models.Model):
     _inherit = 'project.project'
-
 
     @api.model
     def create_project_portal(self, values):
