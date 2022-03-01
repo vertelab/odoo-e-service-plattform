@@ -38,6 +38,24 @@
         </field>
     </record>
 
+    <record id="view_partner_form_navet" model="ir.ui.view">
+        <field name="name">res.partner.form.navet</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <page name="contact_addresses" position="after">
+              <page string="Relations" name="relations">
+                <div class="o_row">
+                  <label for="human_child_ids"/>
+                  <field name="human_child_ids" mode="kanban"/>
+                  <label for="human_parent_ids"/>
+                  <field name="human_parent_ids" mode="kanban"/>
+                </div>
+              </page>
+              <field name="human_parent_ids" mode="kanban"/>
+            </page>
+        </field>
+    </record>
 
     <!-- actions opening views on models -->
 <!--

@@ -22,13 +22,32 @@ class ResUsers(models.Model):
         res = super(ResUsers, self).create(vals)
         source = self.env['auth.oauth.provider'].browse(vals.get('oauth_provider_id', False)).name
         if source == 'Freja eID':
+            _logger.warning("kör1"*99)
             navet = self.env.ref('partner_navet.navet_interface')
             person_data = navet.navet_send_request('194107086995', 162021004748, "00000236-FO01-0001")
             res.partner_id.write({
                 'street': person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress1'] or person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2'] or False,
                 'zip': person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['PostNr'] or False,
                 # 'name': person_data[0]['Personpost']['Namn']['Aviseringsnamn'] or False,
+            
             })
+            _logger.warning("kör2"*99)
+            res.partner_id.write({'human_child_ids': [(0, 0, {
+                'name': 'Samantha Carter', 
+                'company_type': 'person',
+                'social_sec_nr': '200204205575',
+                'street': person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress1'] or person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2'] or False,
+                'zip': person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['PostNr'] or False
+            })]})
+            _logger.warning("kör3"*99)
+            res.partner_id.write({'human_child_ids': [(0, 0, {
+                'name': 'Daniel Jacksson', 
+                'company_type': 'person',
+                'social_sec_nr': '200406104682',
+                'street': person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress1'] or person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2'] or False,
+                'zip': person_data[0]['Personpost']['Adresser']['Folkbokforingsadress']['PostNr'] or False
+            })]})
+            _logger.warning("kör4"*99)
         return res
 [{
     'Sekretessmarkering': None,

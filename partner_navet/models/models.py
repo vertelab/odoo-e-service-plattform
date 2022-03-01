@@ -34,6 +34,7 @@ class NavetImport(models.Model):
         client = Client('https://www2.test.skatteverket.se:443/na/na_epersondata/V3/personpostXML?wsdl', transport=transport)
         print(client)
         person = client.service.getData(Bestallning = {'OrgNr': org_number, 'BestallningsId': ordering_id}, PersonId = person_number)
+        _logger.warning(f"person: {person}")
         return person
 
 class PartnerNavetImport(models.TransientModel):
@@ -66,12 +67,17 @@ class PartnerNavetImport(models.TransientModel):
         _logger.warning("Clicky buttony" * 99)
         person = self.env.ref('partner_navet.navet_interface').navet_send_request(self.person_number, 162021004748, "00000236-FO01-0001")
         self.env["res.partner"].create({
-            "name": f"{person[0]['Personpost']['Namn']['Aviseringsnamn']}",
-            "street": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2']}",
-            "street2": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2']}",
-            "street": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2']}",
-            "zip": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['PostNr']}",
-            "city": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Postort']}",
-            "country_id": self.env["res.country"].search([('name', '=', 'Sweden')])[0].id,
+            "name": f"{person[0]['Personpost']['Namn']['Aviseringsnamn']}" or f"{person[0]['Personpost']['Namn']['Fornamn']} {person[0]['Personpost']['Namn']['Efternamn']}" or False,
+            "street": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2']}" or False,
+            "street2": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2']}" or False,
+            "street": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Utdelningsadress2']}" or False,
+            "zip": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['PostNr']}" or False,
+            "city": f"{person[0]['Personpost']['Adresser']['Folkbokforingsadress']['Postort']}" or False,
+            "country_id": self.env["res.country"].search([('name', '=', 'Sverige')])[0].id or False,
         })
         
+class ResPartner(models.Model):
+    _inherit="res.partner"
+    
+    human_child_ids = fields.Many2many(comodel_name='res.partner', relation='human_relation_ids_rel', string='Children', column1='human_child_ids', column2='human_parent_ids')
+    human_parent_ids = fields.Many2many(comodel_name='res.partner', relation='human_relation_ids_rel', string='Parents', column1='human_parent_ids', column2='human_child_ids')

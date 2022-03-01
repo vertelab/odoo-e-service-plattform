@@ -1,0 +1,120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_navet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20220217\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-01 13:31+0000\n"
+"PO-Revision-Date: 2022-03-01 14:34+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: sv\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_res_partner__human_child_ids
+#: model:ir.model.fields,field_description:partner_navet.field_res_users__human_child_ids
+msgid "Children"
+msgstr "Barn"
+
+#. module: partner_navet
+#: model:ir.model,name:partner_navet.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__create_uid
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__create_date
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__display_name
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import__display_name
+#: model:ir.model.fields,field_description:partner_navet.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__id
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import__id
+#: model:ir.model.fields,field_description:partner_navet.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_navet
+#: model_terms:ir.ui.view,arch_db:partner_navet.navet_import_wizard
+msgid "Import"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.actions.act_window,name:partner_navet.navet_import
+msgid "Import Contacts from Navet"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import____last_update
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import____last_update
+#: model:ir.model.fields,field_description:partner_navet.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Senast redigerad"
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__write_uid
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__write_date
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__key
+msgid "Navet Key"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_res_partner__human_parent_ids
+#: model:ir.model.fields,field_description:partner_navet.field_res_users__human_parent_ids
+msgid "Parents"
+msgstr "Föräldrar"
+
+#. module: partner_navet
+#: model_terms:ir.ui.view,arch_db:partner_navet.view_partner_form_navet
+msgid "Relations"
+msgstr "Relationer"
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_partner_navet_import__person_number
+msgid "Social Security Number"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model.fields,field_description:partner_navet.field_navet_import__name
+msgid "name"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model,name:partner_navet.model_navet_import
+msgid "navet.import"
+msgstr ""
+
+#. module: partner_navet
+#: model:ir.model,name:partner_navet.model_partner_navet_import
+msgid "partner.navet.import"
+msgstr ""
