@@ -6,6 +6,11 @@ from collections import OrderedDict
 from odoo.exceptions import MissingError
 from odoo.addons.website.controllers.main import QueryURL
 import logging
+from collections import deque
+import io
+import json
+from odoo.tools import ustr
+from odoo.tools.misc import xlsxwriter
 
 _logger = logging.getLogger(__name__)
 
@@ -84,3 +89,37 @@ class ProjectEServiceController(http.Controller):
         _logger.error(f"{request.env.context=}")
         view = 'website_project_e_service.e_service_description_full'
         return request.render(view, {'project': project})
+
+    @http.route(['''/download/e-service/<int:project_id>'''], type='http', auth="public", website=True)
+    def download_project_e_service(self, project_id):
+        if project_id:
+            project_obj_id = request.env['project.project'].sudo().browse(project_id)
+
+            output = io.BytesIO()
+            workbook = xlsxwriter.Workbook(output, {'in_memory': True})
+            worksheet = workbook.add_worksheet()
+            row = 0
+            col = 0
+
+            header = ['Name', 'E-Service Form']
+            for data in header:
+                worksheet.write(row, col, data)
+                col += 1
+            col = 0
+
+            for project in project_obj_id:
+                item = [project.name, project.e_service_form]
+                for data in item:
+                    worksheet.write(row, col, data)
+                    col += 1
+                col = 0
+
+            workbook.close()
+            xlsx_data = output.getvalue()
+            response = request.make_response(xlsx_data,
+                                             headers=[('Content-Type',
+                                                       'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'),
+                                                      ('Content-Disposition', 'attachment; filename=%s.xlsx'
+                                                       % project_obj_id.name)])
+
+            return response
