@@ -32,6 +32,7 @@ div.tab-pane.fade.active {
 .nav-link {
     height: 100%;
     padding: 0.5rem 0rem !important;
+    pointer-events: none;
 }
 
 .nav-tabs .nav-link.active > .arrow{
