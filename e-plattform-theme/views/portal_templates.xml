@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="template_template_id" inherit_id="module.template_id" name="Template Name">
+        <xpath expr="//field[@name='name']" position="after">
+            <!-- Add your fields here -->
+            
+        </xpath>
+    </template>
+</odoo>
