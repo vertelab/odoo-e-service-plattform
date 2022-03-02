@@ -87,6 +87,55 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                     };
                 };
             });
+            snippet.find('form').each(function() {
+                let self = $(this);
+                let action = this.action;
+                let model_name = self.data('model_name');
+                let hidden = self.find(`input[type="hidden"]`);
+                let name = hidden[0].name;
+                let value = hidden[0].value;
+                const unique_key = action + model_name + name + value;
+                
+                let storage = localStorage.getItem(unique_key);
+                if (storage == null) {storage = new Object()}
+                else {storage = JSON.parse(storage)}
+
+                for (let field in storage) {
+                    snippet.find(`[name="${field}"]`).each(function() {
+                        if (this.type === 'checkbox') {
+                            this.checked = storage[field];
+                        }
+                        else if (this.type === 'radio') {
+                            if (this.value == storage[field]) {
+                                this.checked = true
+                            }
+                        }
+                        else {
+                            this.value = storage[field];
+                        }
+
+                        $(this).on('input',function() {
+                            if (this.type === 'checkbox') {
+                                storage[field] = this.checked;
+                            }
+                            else {
+                                storage[field] = this.value;
+                            }
+                            localStorage.setItem(unique_key,JSON.stringify(storage));
+                        });
+                    });
+                }
+
+                self.find(".s_website_form_input").each(function() {
+                    if (this.type === 'checkbox') {
+                        storage[this.name] = this.checked;
+                    }
+                    else {
+                        storage[this.name] = this.value;
+                    }
+                    localStorage.setItem(unique_key,JSON.stringify(storage));
+                });
+            });
         };
     });
 });

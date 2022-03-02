@@ -328,11 +328,11 @@
                                             <select class="form-control s_website_form_input" name="Skola" id="Skola" required="1">
                                                 <option disabled="" selected="">Välj skola</option>
                                                 <option value="Skola1">Skola 1</option>
-                                                <option value="Skola1">Skola 2</option>
-                                                <option value="Skola1">Skola 3</option>
-                                                <option value="Skola1">Skola 4</option>
-                                                <option value="Skola1">Skola 5</option>
-                                                <option value="Skola1">Skola 6</option>
+                                                <option value="Skola2">Skola 2</option>
+                                                <option value="Skola3">Skola 3</option>
+                                                <option value="Skola4">Skola 4</option>
+                                                <option value="Skola5">Skola 5</option>
+                                                <option value="Skola6">Skola 6</option>
                                             </select>
                                         </div>
 
@@ -399,7 +399,7 @@
                                                 </div>
                                                 <div class="radio col-12">
                                                     <div class="form-check">
-                                                        <input type="radio" checked="" class="s_website_form_input form-check-input" id="etvp8cj4g192" name="Eleven har en fritidsplats från den här adressen" value="Nej">
+                                                        <input type="radio" class="s_website_form_input form-check-input" id="etvp8cj4g192" name="Eleven har en fritidsplats från den här adressen" value="Nej">
                                                         <label class="form-check-label s_website_form_check_label" for="etvp8cj4g192">Nej</label>
                                                     </div>
                                                 </div>
@@ -419,7 +419,7 @@
                                                 </div>
                                                 <div class="radio col-12">
                                                     <div class="form-check">
-                                                        <input type="radio" checked="" class="s_website_form_input form-check-input" id="7x00hg17hnq1" name="Eleven har en annan bostadsadress" value="Nej">
+                                                        <input type="radio" class="s_website_form_input form-check-input" id="7x00hg17hnq1" name="Eleven har en annan bostadsadress" value="Nej">
                                                         <label class="form-check-label s_website_form_check_label" for="7x00hg17hnq1">Nej</label>
                                                     </div>
                                                 </div>
@@ -470,7 +470,7 @@
                                             </div>
     
                                             <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Särskild kollektivtrafik" id="5djs6sk73mp">
+                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Avstånd till skolan" id="5djs6sk73mp">
                                                 <label class="col-sm-auto s_website_form_label" for="5djs6sk73mp">
                                                     <span class="s_website_form_label_content">Avstånd till skolan (F-3: 3 km, 4-6 4 km, 7-9: 5 km)</span>
                                                 </label>
@@ -505,7 +505,7 @@
                                                 <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Skolskjuts önskas fr.o.m." data-display="horizontal">
                                                     <div class="radio col-12">
                                                         <div class="form-check">
-                                                            <input type="radio" checked="" class="s_website_form_input form-check-input" id="r0zh2cjj3p0" name="Skolskjuts önskas fr.o.m." value="Läsårets start">
+                                                            <input type="radio" class="s_website_form_input form-check-input" id="r0zh2cjj3p0" name="Skolskjuts önskas fr.o.m." value="Läsårets start">
                                                             <label class="col-sm-auto form-check-label s_website_form_check_label" for="r0zh2cjj3p0">
                                                                 Läsårets start
                                                             </label>
