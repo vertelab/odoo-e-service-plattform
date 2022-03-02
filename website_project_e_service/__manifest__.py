@@ -32,6 +32,7 @@
     """,
     'depends': ['project_e_service', 'web_editor', 'website'],
     'data': [
+        'data/e-service_config.xml',
         'data/project.xml',
         'data/website_menu.xml',
         'data/e_service.category.csv',
