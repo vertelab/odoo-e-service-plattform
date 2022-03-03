@@ -104,9 +104,6 @@ header .navbar-brand.logo img {
     margin-top: 2rem;
      margin-bottom: 2rem;
 }
-.navbar-collapse {
-    background-color: #369144;
-}
 .navbar-light {
     background: rgba(0,0,0,0.0);
 }
