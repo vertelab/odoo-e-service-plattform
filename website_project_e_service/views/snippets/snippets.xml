@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_website_form_options" inherit_id="website_form.s_website_form_options">
+        <xpath expr="//div" position="after">
+            <div data-js="WebsiteProjectEService" data-selector=".s_website_form_field">
+                <we-input string="Pattern" class="o_we_large_input" data-name="pattern_opt" data-set-pattern="" />
+            </div>
+        </xpath>
+    </template>
+</odoo>

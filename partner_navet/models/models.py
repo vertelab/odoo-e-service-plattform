@@ -81,3 +81,20 @@ class ResPartner(models.Model):
     
     human_child_ids = fields.Many2many(comodel_name='res.partner', relation='human_relation_ids_rel', string='Children', column1='human_child_ids', column2='human_parent_ids')
     human_parent_ids = fields.Many2many(comodel_name='res.partner', relation='human_relation_ids_rel', string='Parents', column1='human_parent_ids', column2='human_child_ids')
+
+    @api.model
+    def getHumanRelationData(self, *args, **kwargs):
+        domain = [('human_parent_ids', 'in', self.env.user.partner_id.id)]
+        method = kwargs.get('method')
+        if method == 'children':
+            return self.sudo().search_read(domain, args)
+        # WIP: HAN
+        # _logger.error(f"{args=}")
+        # _logger.error(f"{kwargs=}")
+        # elif method == 'spouse':
+        #     child_id = kwargs.get('child_id')
+        #     domain += [('id', '=', child_id)]
+        #     _logger.error(f"{domain=}")
+        #     if(child := self.sudo().search(domain)):
+        #         _logger.error(f"{child=}")
+        #         return child

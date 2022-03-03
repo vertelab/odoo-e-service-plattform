@@ -6,7 +6,7 @@
         <field name="e_service_icon" type="base64" file="website_project_e_service/static/img/skolskjuts.png" />
         <field name="e_service_form">
             <![CDATA[
-<section class="s_tabs pt48 pb48" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
+<section class="s_tabs pt48 pb48 s_e_service_snippet" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
     <div class="container">
         <div class="s_tabs_main card" id="tabs">
             <div class="s_tabs_nav card-header">
@@ -100,7 +100,7 @@
                                                     <span class="s_website_form_label_content">Kund</span>
                                                 </label>
                                                 <div class="col-sm">
-                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.partner_id" />
                                                 </div>
                                             </div>
                                         </div>
@@ -128,63 +128,61 @@
                                                 <span class="s_website_form_label_content">Namn</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Namn" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Namn" />
+                                            <input id="Namn" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Namn" data-autofill="user.name" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="email" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="E-post">
                                                 <span class="s_website_form_label_content">E-post</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="E-post" class="form-control s_website_form_input" type="text" name="email" required="1" placeholder="E-post" />
+                                            <input id="E-post" class="form-control s_website_form_input" type="email" name="Vårdnadshavare 1 E-post" required="1" placeholder="E-post" pattern="^\S+@(\S+\.)+[^\s.]{2,6}$" data-autofill="user.email" />
                                         </div>
                                         
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Personnummer">
                                                 <span class="s_website_form_label_content">Personnummer</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Personnummer" class="form-control s_website_form_input" type="text" name="social_sec_nr" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
+                                            <input id="Personnummer" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Personnummer" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" data-autofill="user.social_sec_nr" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Adress">
                                                 <span class="s_website_form_label_content">Adress</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Adress" class="form-control s_website_form_input" type="text" name="street" required="1" placeholder="Adress" />
+                                            <input id="Adress" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Adress" required="1" placeholder="Adress" data-autofill="user.street" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Postnr">
                                                 <span class="s_website_form_label_content">Postnr</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Postnr" class="form-control s_website_form_input" type="text" name="zip" required="1" placeholder="Postnr" />
+                                            <input id="Postnr" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Postnr" required="1" placeholder="Postnr" data-autofill="user.zip" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Ort">
                                                 <span class="s_website_form_label_content">Ort</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Ort" class="form-control s_website_form_input" type="text" name="city" required="1" placeholder="Ort" />
+                                            <input id="Ort" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Ort" required="1" placeholder="Ort" data-autofill="user.city" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="tel" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Telefon">
                                                 <span class="s_website_form_label_content">Telefon</span>
-                                                <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Telefon" class="form-control s_website_form_input" type="text" name="Telefon" required="1" placeholder="Telefon" />
+                                            <input id="Telefon" class="form-control s_website_form_input" type="tel" name="Vårdnadshavare 1 Telefon" placeholder="Telefon" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Mobil">
                                                 <span class="s_website_form_label_content">Mobil</span>
-                                                <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Mobil" class="form-control s_website_form_input" type="text" name="Mobil" required="1" placeholder="Mobil" />
+                                            <input id="Mobil" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Mobil" placeholder="Mobil" />
                                         </div>
 
                                         <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
@@ -195,56 +193,56 @@
                                             </div>
                                         </section>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Namn">
                                                 <span class="s_website_form_label_content">Namn</span>
                                             </label>
                                             <input id="Vårdnadshavare 2 Namn" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Namn" placeholder="Namn" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="email" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 E-post">
                                                 <span class="s_website_form_label_content">E-post</span>
                                             </label>
-                                            <input id="Vårdnadshavare 2 E-post" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 E-post" placeholder="E-post" />
+                                            <input id="Vårdnadshavare 2 E-post" class="form-control s_website_form_input" type="email" name="Vårdnadshavare 2 E-post" placeholder="E-post" pattern="^\S+@(\S+\.)+[^\s.]{2,6}$" />
                                         </div>
                                         
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Personnummer">
                                                 <span class="s_website_form_label_content">Personnummer</span>
                                             </label>
                                             <input id="Vårdnadshavare 2 Personnummer" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Personnummer" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Adress">
                                                 <span class="s_website_form_label_content">Adress</span>
                                             </label>
                                             <input id="Vårdnadshavare 2 Adress" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Adress" placeholder="Adress" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Postnr">
                                                 <span class="s_website_form_label_content">Postnr</span>
                                             </label>
                                             <input id="Vårdnadshavare 2 Postnr" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Postnr" placeholder="Postnr" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Ort">
                                                 <span class="s_website_form_label_content">Ort</span>
                                             </label>
                                             <input id="Vårdnadshavare 2 Ort" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Ort" placeholder="Ort" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="tel" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Telefon">
                                                 <span class="s_website_form_label_content">Telefon</span>
                                             </label>
-                                            <input id="Vårdnadshavare 2 Telefon" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Telefon" placeholder="Telefon" />
+                                            <input id="Vårdnadshavare 2 Telefon" class="form-control s_website_form_input" type="tel" name="Vårdnadshavare 2 Telefon" placeholder="Telefon" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Mobil">
                                                 <span class="s_website_form_label_content">Mobil</span>
                                             </label>
@@ -272,20 +270,30 @@
                                             </div>
                                         </section>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required pb0" data-type="many2one" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Barn">
+                                                <span class="s_website_form_label_content">Välj barn</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <select class="form-control s_website_form_input" name="Barn" id="Barn" required="1" data-autofill="children">
+                                                <option disabled="" selected="">Välj barn</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Elevens Namn">
                                                 <span class="s_website_form_label_content">Namn</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Elevens Namn" class="form-control s_website_form_input" type="text" name="Elevens Namn" required="1" placeholder="Namn" />
+                                            <input id="Elevens Namn" class="form-control s_website_form_input" type="text" name="Elevens Namn" required="1" placeholder="Namn" data-autofill="child.name" />
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Elevens Personnummer">
                                                 <span class="s_website_form_label_content">Personnummer</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <input id="Elevens Personnummer" class="form-control s_website_form_input" type="text" name="Elevens Personnummer" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
+                                            <input id="Elevens Personnummer" class="form-control s_website_form_input" type="text" name="Elevens Personnummer" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" data-autofill="child.social_sec_nr" />
                                         </div>
 
                                         <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="many2one" data-name="Field">
@@ -306,7 +314,7 @@
                                                 <span class="s_website_form_label_content">Årskurs</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <select class="form-control s_website_form_input" name="grade" id="Årskurs" required="1">
+                                            <select class="form-control s_website_form_input" name="Årskurs" id="Årskurs" required="1">
                                                 <option disabled="" selected="">Välj årskurs</option>
                                                 <option value="Årskurs 1">Årskurs 1</option>
                                                 <option value="Årskurs 2">Årskurs 2</option>
@@ -328,11 +336,11 @@
                                             <select class="form-control s_website_form_input" name="Skola" id="Skola" required="1">
                                                 <option disabled="" selected="">Välj skola</option>
                                                 <option value="Skola1">Skola 1</option>
-                                                <option value="Skola1">Skola 2</option>
-                                                <option value="Skola1">Skola 3</option>
-                                                <option value="Skola1">Skola 4</option>
-                                                <option value="Skola1">Skola 5</option>
-                                                <option value="Skola1">Skola 6</option>
+                                                <option value="Skola2">Skola 2</option>
+                                                <option value="Skola3">Skola 3</option>
+                                                <option value="Skola4">Skola 4</option>
+                                                <option value="Skola5">Skola 5</option>
+                                                <option value="Skola6">Skola 6</option>
                                             </select>
                                         </div>
 
@@ -342,25 +350,25 @@
                                             </div>
                                         </section>
     
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Elevens Adress">
                                                 <span class="s_website_form_label_content">Adress</span>
                                             </label>
-                                            <input id="Elevens Adress" class="form-control s_website_form_input" type="text" name="Elevens Adress" placeholder="Adress" />
+                                            <input id="Elevens Adress" class="form-control s_website_form_input" type="text" name="Elevens Adress" placeholder="Adress" data-autofill="child.street"/>
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Elevens Postnr">
                                                 <span class="s_website_form_label_content">Postnr</span>
                                             </label>
-                                            <input id="Elevens Postnr" class="form-control s_website_form_input" type="text" name="Elevens Postnr" placeholder="Postnr" />
+                                            <input id="Elevens Postnr" class="form-control s_website_form_input" type="text" name="Elevens Postnr" placeholder="Postnr" data-autofill="child.zip"/>
                                         </div>
 
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
                                             <label class="s_website_form_label" style="width: 250px" for="Elevens Ort">
                                                 <span class="s_website_form_label_content">Ort</span>
                                             </label>
-                                            <input id="Elevens Ort" class="form-control s_website_form_input" type="text" name="Elevens Ort" placeholder="Ort" />
+                                            <input id="Elevens Ort" class="form-control s_website_form_input" type="text" name="Elevens Ort" placeholder="Ort" data-autofill="child.city"/>
                                         </div>
 
                                         <section class="s_text_block pt0 pb24 col-12" data-snippet="s_text_block" data-name="Text">
@@ -369,7 +377,7 @@
                                             </div>
                                         </section>
     
-                                        <div class="form-group s_website_form_field col-12" data-type="boolean" data-name="Field">
+                                        <div class="form-group s_website_form_field col-12 s_website_form_custom" data-type="boolean" data-name="Field">
                                             <div class="row s_col_no_resize s_col_no_bgcolor">
                                                 <label class="col-sm-auto s_website_form_label text-right"  style="width: 250px" for="Ansökan gäller en framtida adress">
                                                     <span class="s_website_form_label_content">Ansökan gäller en framtida adress</span>
@@ -399,7 +407,7 @@
                                                 </div>
                                                 <div class="radio col-12">
                                                     <div class="form-check">
-                                                        <input type="radio" checked="" class="s_website_form_input form-check-input" id="etvp8cj4g192" name="Eleven har en fritidsplats från den här adressen" value="Nej">
+                                                        <input type="radio" class="s_website_form_input form-check-input" id="etvp8cj4g192" name="Eleven har en fritidsplats från den här adressen" value="Nej">
                                                         <label class="form-check-label s_website_form_check_label" for="etvp8cj4g192">Nej</label>
                                                     </div>
                                                 </div>
@@ -419,7 +427,7 @@
                                                 </div>
                                                 <div class="radio col-12">
                                                     <div class="form-check">
-                                                        <input type="radio" checked="" class="s_website_form_input form-check-input" id="7x00hg17hnq1" name="Eleven har en annan bostadsadress" value="Nej">
+                                                        <input type="radio" class="s_website_form_input form-check-input" id="7x00hg17hnq1" name="Eleven har en annan bostadsadress" value="Nej">
                                                         <label class="form-check-label s_website_form_check_label" for="7x00hg17hnq1">Nej</label>
                                                     </div>
                                                 </div>
@@ -443,7 +451,7 @@
                                                 <h3>Ansökan</h3>
                                             </div>
                                             <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Skolskjuts önskas från folkbokföringsadressen" id="teh6le3r1o">
+                                                <input type="checkbox" value="Ja" class="s_website_form_input" name="Skolskjuts önskas från folkbokföringsadressen" id="teh6le3r1o">
                                                 <label class="col-sm-auto s_website_form_label" for="teh6le3r1o">
                                                     <span class="s_website_form_label_content">Skolskjuts önskas från folkbokföringsadressen</span>
                                                 </label>
@@ -454,13 +462,13 @@
                                                 <h3>Välj ett färdmedel</h3>
                                             </div>
                                             <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="SL Kort" id="5djs6sk73kn">
+                                                <input type="checkbox" value="Ja" class="s_website_form_input" name="SL Kort" id="5djs6sk73kn">
                                                 <label class="col-sm-auto s_website_form_label " for="5djs6sk73kn">
                                                     <span class="s_website_form_label_content">SL Kort</span>
                                                 </label>
                                             </div>
                                             <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Särskild kollektivtrafik" id="5djs6sk73mn">
+                                                <input type="checkbox" value="Ja" class="s_website_form_input" name="Särskild kollektivtrafik" id="5djs6sk73mn">
                                                 <label class="col-sm-auto s_website_form_label" for="5djs6sk73mn">
                                                     <span class="s_website_form_label_content">Särskild kollektivtrafik</span>
                                                 </label>
@@ -470,7 +478,7 @@
                                             </div>
     
                                             <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Särskild kollektivtrafik" id="5djs6sk73mp">
+                                                <input type="checkbox" value="Ja" class="s_website_form_input" name="Avstånd till skolan" id="5djs6sk73mp">
                                                 <label class="col-sm-auto s_website_form_label" for="5djs6sk73mp">
                                                     <span class="s_website_form_label_content">Avstånd till skolan (F-3: 3 km, 4-6 4 km, 7-9: 5 km)</span>
                                                 </label>
@@ -481,19 +489,19 @@
                                                 <h3>Välj en period</h3>
                                             </div>
                                             <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Hela läsåret" id="qvw0mcoxej">
+                                                <input type="checkbox" value="Ja" class="s_website_form_input" name="Hela läsåret" id="qvw0mcoxej">
                                                 <label class="col-sm-auto s_website_form_label" for="qvw0mcoxej">
                                                     <span class="s_website_form_label_content">Hela läsåret</span>
                                                 </label>
                                             </div>
-                                            <div class="form-group s_website_form_field s_website_form_custom " data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Vinterskolskjuts" id="vh2tl6qvwzi">
+                                            <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
+                                                <input type="checkbox" value="Ja" class="s_website_form_input" name="Vinterskolskjuts" id="vh2tl6qvwzi">
                                                 <label class="col-sm-auto s_website_form_label" for="vh2tl6qvwzi">
                                                     <span class="s_website_form_label_content">Vinterskolskjuts</span>
                                                 </label>
                                             </div>
                                             <div class="form-group s_website_form_field s_website_form_custom" data-type="boolean" data-name="Field">
-                                                <input type="checkbox" value="Yes" class="s_website_form_input" name="Skjuts till/från lovskola" id="7opq0riczz">
+                                                <input type="checkbox" value="Ja" class="s_website_form_input" name="Skjuts till/från lovskola" id="7opq0riczz">
                                                 <label class="col-sm-auto s_website_form_label" for="7opq0riczz">
                                                     <span class="s_website_form_label_content">Skjuts till/från lovskola</span>
                                                 </label>
@@ -505,7 +513,7 @@
                                                 <div class="row s_col_no_resize s_col_no_bgcolor s_website_form_multiple" data-name="Skolskjuts önskas fr.o.m." data-display="horizontal">
                                                     <div class="radio col-12">
                                                         <div class="form-check">
-                                                            <input type="radio" checked="" class="s_website_form_input form-check-input" id="r0zh2cjj3p0" name="Skolskjuts önskas fr.o.m." value="Läsårets start">
+                                                            <input type="radio" class="s_website_form_input form-check-input" id="r0zh2cjj3p0" name="Skolskjuts önskas fr.o.m." value="Läsårets start">
                                                             <label class="col-sm-auto form-check-label s_website_form_check_label" for="r0zh2cjj3p0">
                                                                 Läsårets start
                                                             </label>

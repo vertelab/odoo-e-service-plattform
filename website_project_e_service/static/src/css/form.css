@@ -28,11 +28,11 @@ div.tab-pane.fade.active {
     margin-left: 99.5%;
     position: relative;
 }
-
-.nav-link {
+.s_e_service_snippet a.nav-link {
     height: 100%;
     padding: 0.5rem 0rem !important;
-    pointer-events: none;
+    /* pointer-events: none; */
+    user-select: none;
 }
 
 .nav-tabs .nav-link.active > .arrow{

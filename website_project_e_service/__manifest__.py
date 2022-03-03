@@ -27,10 +27,11 @@
     'version': '14.0.0.1.0',
     'website': 'https://vertel.se',
     'description': """
+        14.0.0.2.0 - Add autofill for input fields
         14.0.0.1.0 - Add Skolskjuts-form
         14.0.0.0.1 - Initial Development
     """,
-    'depends': ['project_e_service', 'web_editor', 'website'],
+    'depends': ['freja_partner_navet', 'project_e_service', 'website_form'],
     'data': [
         'security/ir.model.access.csv',
         'wizards/project_wizard.xml',
@@ -44,6 +45,7 @@
         'views/e_service_template.xml',
         'views/e_service_description.xml',
         'views/e_service_snippet.xml',
+        'views/snippets/snippets.xml',
     ],
     'application': True,
     'installable': True,
