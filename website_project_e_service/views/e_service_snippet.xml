@@ -80,7 +80,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                                <div class="form-group col-12 text-right s_website_form_no_submit_label" data-name="Next Button">
                                                     <span id="s_website_form_result" />
                                                     <div class="s_website_form_label" style="width: 250px" />
                                                     <a href="#nav_tabs_link_2" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Next Button</a>
@@ -164,7 +164,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Submit Button">
+                                                <div class="form-group col-12 text-right s_website_form_no_submit_label" data-name="Submit Button">
                                                     <span id="s_website_form_result"></span>
                                                     <div style="width: 250px" class="s_website_form_label"></div>
                                                     <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send o_default_snippet_text">Submit</a>

@@ -105,7 +105,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                        <div class="form-group col-12  text-right s_website_form_no_submit_label" data-name="Next Button">
                                             <span id="s_website_form_result" />
                                             <div style="width: 200px;" class="s_website_form_label" />
                                             <a href="#nav_tabs_link_2" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
@@ -249,7 +249,7 @@
                                             <input id="Vårdnadshavare 2 Mobil" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Mobil" placeholder="Mobil" />
                                         </div>
 
-                                        <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                        <div class="form-group col-12  text-right s_website_form_no_submit_label" data-name="Next Button">
                                             <span id="s_website_form_result"></span>
                                             <div style="width: 250px" class="s_website_form_label"></div>
                                             <a href="#nav_tabs_link_3" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
@@ -434,7 +434,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                        <div class="form-group col-12  text-right s_website_form_no_submit_label" data-name="Next Button">
                                             <span id="s_website_form_result" />
                                             <div class="s_website_form_label" style="width: 250px" />
                                             <a href="#nav_tabs_link_4" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
@@ -528,6 +528,17 @@
                                                 </div>
                                             </div>
 
+                                            <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
+                                                <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 250px">
+                                                        <span class="s_website_form_label_content" />
+                                                    </label>
+                                                    <div class="col-sm">
+                                                        <input type="hidden" class="form-control s_website_form_input" name="project_id" value="3" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Submit Button">
                                                 <span id="s_website_form_result"></span>
                                                 <div style="width: 250px" class="s_website_form_label"></div>
@@ -535,17 +546,6 @@
                                             </div>
                                         </section>
                                     </div>        
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group s_website_form_field col-12 s_website_form_dnone" data-name="Field">
-                            <div class="row s_col_no_resize s_col_no_bgcolor">
-                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 250px">
-                                    <span class="s_website_form_label_content" />
-                                </label>
-                                <div class="col-sm">
-                                    <input type="hidden" class="form-control s_website_form_input" name="project_id" value="3" />
                                 </div>
                             </div>
                         </div>
