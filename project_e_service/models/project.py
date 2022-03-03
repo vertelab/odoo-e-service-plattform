@@ -82,7 +82,7 @@ class ProjectTask(models.Model):
                 if template_id:
                     template = self.env['mail.template'].browse(template_id)
                     values = template.generate_email(task.id, ['subject', 'body_html', 'email_from', 'email_to', 'partner_to', 'email_cc', 'reply_to', 'scheduled_date'])
-                    values['partner_ids']: [6,0,[task.partner_id.id]]
+                    values['email_to'] = secondary.email
                     _logger.warning('---------> Secondary Sign Values %s' % values)
                     msg_id = self.env['mail.mail'].create(values)
                     _logger.warning('---------> Secondary Sign Msg_id %s' % msg_id)
