@@ -32,6 +32,8 @@
     """,
     'depends': ['project_e_service', 'web_editor', 'website'],
     'data': [
+        'security/ir.model.access.csv',
+        'wizards/project_wizard.xml',
         'data/e-service_config.xml',
         'data/project.xml',
         'data/website_menu.xml',

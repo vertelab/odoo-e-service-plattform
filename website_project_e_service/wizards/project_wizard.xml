@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="import_project" model="ir.ui.view">
+            <field name="name">import.project.form.wizard</field>
+            <field name="model">import.project.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Upload project" method="post" enctype="multipart/form-data">
+                    <group>
+                        <field name="project_file"/>
+                    </group>
+                    <div class="text-muted">
+                        Please provide the excel file with project data
+                    </div>
+                    <footer>
+                        <button name="do_import_stuff" string="Import Project" class="btn-primpary" type="object"/>
+                        <buton string="cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_import_event_participants" model="ir.actions.act_window">
+            <field name="name">Import a project</field>
+            <field name="res_model">import.project.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="import_project"/>
+            <field name="target">new</field>
+        </record>
+        <menuitem action="action_import_event_participants" id="menu_wizard_import_project" parent="project.menu_project_config" />
+        
+    </data>
+</odoo>
