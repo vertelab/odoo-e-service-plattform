@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <template id="assets_editor" inherit_id="website.assets_editor" name="E-Service Assets Editor">
         <xpath expr="." position="inside">
             <script type="text/javascript" src="/website_project_e_service/static/src/js/e_service.js"/>
-<!--            <script type="text/javascript" src="/website_project_e_service/static/src/js/snippet.js"/>-->
-        </xpath>
-    </template>
-    <template id="assets_frontend" inherit_id="web.assets_frontend">
-        <xpath expr="link[last()]" position="after">
-            <link rel="stylesheet" href="/website_project_e_service/static/src/css/form.css"/>
-        </xpath>
-        <xpath expr="//script[last()]" position="after">
-            <script type="text/javascript" src="/website_project_e_service/static/src/js/snippet.js"/>
-<!--            <script type="text/javascript" src="/website_project_e_service/static/src/js/form.js" />-->
         </xpath>
     </template>
 
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/css" href="/website_project_e_service/static/src/css/form.css" />
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/website_project_e_service/static/src/js/snippet.js" />
+        </xpath>
+    </template>
 </odoo>
