@@ -88,4 +88,49 @@
     .wrapper {
         display: none;
     }
+}
+
+/* 
+    Micke Changes
+*/
+
+header .navbar-brand.logo img {
+    /* //height: 5rem; */
+    margin-top: 2rem;
+     margin-bottom: 2rem;
+}
+.navbar-collapse {
+    /* //background-color: #369144; */
+}
+.navbar-light {
+    background: rgba(0,0,0,0.0);
+}
+  li .navbar-light .navbar-nav .nav-link {
+    color: #ff0;
+   
   }
+  
+#top_menu_collapse .nav-link {
+    color: #fff;
+}
+
+/* .navbar-light .navbar-nav .nav-link {
+} */
+  
+.navbar-nav li a:hover {
+   background-color:#125c1d;
+   color: #fff;
+}
+  
+.navbar-light .nav-pills .nav-link.active {
+      background-color: #125c1d;
+      padding: 1rem;
+}
+  
+.nav-link {
+    height: 100%;
+    padding: 1rem 1rem !important;
+    /* color: #fff */
+}
+
+ul.nav a:hover { color: #fff !important; }
