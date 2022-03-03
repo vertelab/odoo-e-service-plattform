@@ -93,6 +93,10 @@
     margin-right: 5px;
 }
 
+#top_menu_collapse .nav-link {
+    color: #125c1d;
+}
+
 @media (max-width: 480px) {
     .wrapper {
         display: none;
