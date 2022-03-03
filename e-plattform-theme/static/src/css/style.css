@@ -1,3 +1,8 @@
+#top {
+    background-image:url("/web/image/1350-345fb9d9/atvid-navbar-bg.png");
+    background-repeat: repeat-x;
+}
+
 .wrapper {
     display: flex;
     width: 53%;
@@ -100,7 +105,7 @@ header .navbar-brand.logo img {
      margin-bottom: 2rem;
 }
 .navbar-collapse {
-    /* //background-color: #369144; */
+    background-color: #369144;
 }
 .navbar-light {
     background: rgba(0,0,0,0.0);
