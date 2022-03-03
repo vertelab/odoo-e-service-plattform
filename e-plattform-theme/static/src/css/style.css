@@ -94,7 +94,7 @@
 }
 
 #top_menu_collapse .nav-link {
-    color: #125c1d;
+    color: #125c1d !important;
 }
 
 @media (max-width: 480px) {
