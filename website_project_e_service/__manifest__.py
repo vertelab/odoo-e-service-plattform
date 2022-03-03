@@ -27,6 +27,7 @@
     'version': '14.0.0.1.0',
     'website': 'https://vertel.se',
     'description': """
+        14.0.0.2.0 - Add autofill for input fields
         14.0.0.1.0 - Add Skolskjuts-form
         14.0.0.0.1 - Initial Development
     """,
