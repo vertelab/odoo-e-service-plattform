@@ -1,6 +1,10 @@
 #top {
-    background-image:url("/web/image/1350-345fb9d9/atvid-navbar-bg.png");
+    background-image: url("/web/image/1350-345fb9d9/atvid-navbar-bg.png");
     background-repeat: repeat-x;
+}
+
+.navbar-light {
+    background: rgba(0,0,0,0.0) !important;
 }
 
 .wrapper {
@@ -104,13 +108,10 @@ header .navbar-brand.logo img {
     margin-top: 2rem;
      margin-bottom: 2rem;
 }
-.navbar-light {
-    background: rgba(0,0,0,0.0);
-}
-  li .navbar-light .navbar-nav .nav-link {
+  
+li .navbar-light .navbar-nav .nav-link {
     color: #ff0;
-   
-  }
+}
   
 #top_menu_collapse .nav-link {
     color: #fff;
