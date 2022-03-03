@@ -1,9 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <template id="template_template_id" inherit_id="module.template_id" name="Template Name">
-        <xpath expr="//field[@name='name']" position="after">
-            <!-- Add your fields here -->
-            
+    <template id="e_platform_header_extension" inherit_id="website.template_header_slogan" name="E platform header extension">
+        <xpath expr="//div[@id='top_menu_container']/t[@t-call='website.placeholder_header_brand']" position="after">
+            <div class="wrapper">
+                <form method="get" class="search-wrapper">
+                    <div>
+                        <label class="ohidden" for="search_field">Sök</label>
+                        <input id="search_field" type="text" name="Search Field" placeholder="Hej, vad letar du efter?" />
+                        <div class="button-wrapper">
+                            <input id="search_field_submit" type="submit" class="search-field-submit-button" name="Submit Button" value="&#xf002;"/>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="header-links-wrapper">
+                    <ul>
+                        <li>
+                            <i class="fa fa-globe fa-solid"></i>
+                            <span>Translate</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-volume-up fa-solid"></i>
+                            <span>Lyssna</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-comments fa-solid"></i>
+                            <span>Kontakta oss</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </xpath>
     </template>
 </odoo>

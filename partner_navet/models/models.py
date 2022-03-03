@@ -4,7 +4,6 @@ from requests import Session
 from zeep import Client
 from zeep.transports import Transport
 from OpenSSL import crypto
-import xmltodict
 import logging
 _logger = logging.getLogger(__name__)
 

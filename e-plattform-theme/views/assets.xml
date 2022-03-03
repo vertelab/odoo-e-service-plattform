@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="_assets_frontend_helpers" inherit_id="website._assets_frontend_helpers" priority="1">
+        <xpath expr="//link" position="before">
+            <link rel="stylesheet" type="text/scss" href="/e-plattform-theme/static/src/css/style.css"/>
+        </xpath>
+    </template>
+</odoo>

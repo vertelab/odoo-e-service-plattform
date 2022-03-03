@@ -39,6 +39,6 @@
         'views/assets.xml',
         'views/portal_templates.xml',
         ],
-    'application': False,
+    'application': True,
     'installable': True,
 }
