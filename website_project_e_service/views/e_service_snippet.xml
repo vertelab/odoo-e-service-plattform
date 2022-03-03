@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="s_e_service_snippet" name="E-Service Form">
-        <section class="s_tabs pt48 pb48" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
+        <section class="s_tabs pt48 pb48 s_e_service_snippet" data-vcss="001" data-snippet="s_tabs" data-name="Tabs">
             <div class="container">
                 <div class="s_tabs_main card" id="tabs">
                     <div class="s_tabs_nav card-header">
@@ -75,12 +75,12 @@
                                                             <span class="s_website_form_label_content">Customer</span>
                                                         </label>
                                                         <div class="col-sm">
-                                                            <input id="customer" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" />
+                                                            <input id="customer" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.partner_id" />
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
+                                                <div class="form-group col-12 text-right s_website_form_no_submit_label" data-name="Next Button">
                                                     <span id="s_website_form_result" />
                                                     <div class="s_website_form_label" style="width: 250px" />
                                                     <a href="#nav_tabs_link_2" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Next Button</a>
@@ -93,51 +93,51 @@
                                         <div class="oe_structure oe_empty">
                                             <div class="s_website_form_rows row s_col_no_bgcolor">
                                                 <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
-                                                    <label class="s_website_form_label" style="width: 250px" for="name">
+                                                    <label class="s_website_form_label" style="width: 250px" for="Name">
                                                         <span class="s_website_form_label_content">Name</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <input id="name" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Name" />
+                                                    <input id="Name" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Name" data-autofill="user.name" />
                                                 </div>
 
-                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
-                                                    <label class="s_website_form_label" style="width: 250px" for="email">
+                                                <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="email" data-name="Field">
+                                                    <label class="s_website_form_label" style="width: 250px" for="E-mail">
                                                         <span class="s_website_form_label_content">E-mail</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <input id="email" class="form-control s_website_form_input" type="text" name="email" required="1" placeholder="E-mail" />
+                                                    <input id="E-mail" class="form-control s_website_form_input" type="email" name="E-mail" required="1" placeholder="E-mail" data-autofill="user.email" />
                                                 </div>
 
                                                 <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
-                                                    <label class="s_website_form_label" style="width: 250px" for="social_sec_nr">
+                                                    <label class="s_website_form_label" style="width: 250px" for="Social Security No">
                                                         <span class="s_website_form_label_content">Social Security No</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <input id="social_sec_nr" class="form-control s_website_form_input" type="text" name="social_sec_nr" required="1" placeholder="Social Security No" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
+                                                    <input id="Social Security No" class="form-control s_website_form_input" type="text" name="Social Security No" required="1" placeholder="Social Security No" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" data-autofill="user.social_sec_nr" />
                                                 </div>
 
                                                 <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
-                                                    <label class="s_website_form_label" style="width: 250px" for="street">
+                                                    <label class="s_website_form_label" style="width: 250px" for="Street">
                                                         <span class="s_website_form_label_content">Street</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <input id="street" class="form-control s_website_form_input" type="text" name="street" required="1" placeholder="Street" />
+                                                    <input id="Street" class="form-control s_website_form_input" type="text" name="Street" required="1" placeholder="Street" data-autofill="user.street" />
                                                 </div>
 
                                                 <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
-                                                    <label class="s_website_form_label" style="width: 250px" for="zip">
+                                                    <label class="s_website_form_label" style="width: 250px" for="Zip">
                                                         <span class="s_website_form_label_content">Zip</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <input id="zip" class="form-control s_website_form_input" type="text" name="zip" required="1" placeholder="Zip" />
+                                                    <input id="Zip" class="form-control s_website_form_input" type="text" name="Zip" required="1" placeholder="Zip" data-autofill="user.zip" />
                                                 </div>
 
                                                 <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
-                                                    <label class="s_website_form_label" style="width: 250px" for="city">
+                                                    <label class="s_website_form_label" style="width: 250px" for="City">
                                                         <span class="s_website_form_label_content">City</span>
                                                         <span class="s_website_form_mark"> *</span>
                                                     </label>
-                                                    <input id="city" class="form-control s_website_form_input" type="text" name="city" required="1" placeholder="City" />
+                                                    <input id="City" class="form-control s_website_form_input" type="text" name="City" required="1" placeholder="City" data-autofill="user.city" />
                                                 </div>
 
                                                 <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Next Button">
@@ -164,7 +164,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group col-12 s_website_form_submit text-right s_website_form_no_submit_label" data-name="Submit Button">
+                                                <div class="form-group col-12 text-right s_website_form_no_submit_label" data-name="Submit Button">
                                                     <span id="s_website_form_result"></span>
                                                     <div style="width: 250px" class="s_website_form_label"></div>
                                                     <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send o_default_snippet_text">Submit</a>

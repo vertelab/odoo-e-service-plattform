@@ -101,19 +101,24 @@ class ProjectEServiceController(http.Controller):
             row = 0
             col = 0
 
-            header = ['Name', 'E-Service Form']
+            # ~ header = ['Name', 'E-Service Form','Service Category/E-Service/Name','Require Login','Is e-service','Icon']
+            header = ['Name', 'E-Service Form','Service Category/E-Service/Name','Require Login','Is e-service']
             for data in header:
+                _logger.warning(f"{data=}")
                 worksheet.write(row, col, data)
                 col += 1
             col = 0
 
             for project in project_obj_id:
-                item = [project.name, project.e_service_form]
+                # ~ item = [project.name, project.e_service_form,project.e_service_category.name,project.require_login,project.is_e_service,project.e_service_icon]
+                item = [project.name, project.e_service_form,project.e_service_category.name,project.require_login,project.is_e_service]
                 for data in item:
-                    worksheet.write(row, col, data)
+                    if data == project.e_service_icon:
+                        worksheet.insert_image(row, col, data)
+                    else:
+                        worksheet.write(row, col, data)
                     col += 1
                 col = 0
-
             workbook.close()
             xlsx_data = output.getvalue()
             response = request.make_response(xlsx_data,
