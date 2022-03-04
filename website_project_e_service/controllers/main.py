@@ -128,3 +128,19 @@ class ProjectEServiceController(http.Controller):
                                                        % project_obj_id.name)])
 
             return response
+
+
+    @http.route(['/e-service/portal/accept'], type='json', auth="public", website=True)
+    def _eservice_portal_accept(self, partner_id=None, task_id=None,failed=False, **kwargs):
+        task = request.env['project.task'].sudo().browse(int(task_id))
+        template_id = request.env['ir.model.data'].get_object_reference(
+                    'eservice_portal_accept',
+                    'email_template_eservice_portal_accept')[1]
+        if template_id:
+            template = self.env['mail.template'].browse(template_id)
+            values = template.generate_email(task.id, ['subject', 'body_html', 'email_from', 'email_to', 'partner_to', 'email_cc', 'reply_to', 'scheduled_date'])
+            msg_id = self.env['mail.mail'].create(values)
+            if msg_id:
+                msg_id._send()
+
+        return {'result': True}
