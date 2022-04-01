@@ -83,10 +83,18 @@ class ResPartner(models.Model):
 
     @api.model
     def getHumanRelationData(self, *args, **kwargs):
-        domain = [('human_parent_ids', 'in', self.env.user.partner_id.id)]
+        
+        
         method = kwargs.get('method')
         if method == 'children':
-            return self.sudo().search_read(domain, args)
+            children_domain = [('human_parent_ids', 'in', self.env.user.partner_id.id)]
+            return self.sudo().search_read(children_domain, args)
+        if method == 'partner':
+            child_id = kwargs.get('child_id')
+            partner_domain = [('human_child_ids', 'in', child_id), ('id', '!=', self.env.user.partner_id.id)]
+            _logger.warning(f"{partner_domain=}")
+            _logger.warning(f"{args=}")
+            return self.sudo().search_read(partner_domain, args)
         # WIP: HAN
         # _logger.error(f"{args=}")
         # _logger.error(f"{kwargs=}")

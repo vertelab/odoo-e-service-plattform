@@ -10,15 +10,15 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
     const _t = core._t;
 
     function autofillInput(selector, res_field, datas) {
-        for (const data of datas){
+        for (const data of datas) {
             for (let key in data) {
                 let val = data[key];
                 if (val) {
                     if (Array.isArray(val))
-                    val = val[0];
+                        val = val[0];
                     $(selector).find(`[data-autofill]`).each(function () {
                         if ($(this).data("autofill") === `${res_field}.${key}`)
-                        $(this).val(val);
+                            $(this).val(val);
                     });
                 };
             };
@@ -89,6 +89,7 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
         $(`[data-snippet="s_tabs"]`).each(function () {
             const elem = this;
             const snippet = $(this);
+
             snippet.find(".s_website_form_input").on("input", validateInput);
             if (session.user_id != false) {
                 const userFields = getAutofillInputs(elem, "user");
@@ -99,7 +100,23 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                 }).then(function (data) {
                     autofillInput(elem, "user", data);
                     const childFields = getAutofillInputs(elem, "child");
+                    const partnerFields = getAutofillInputs(elem, "partner");
                     getData(childFields, { method: "children" }).then(function (children) {
+                        getData(partnerFields, { method: "partner", child_id: children[0]['id'] }).then(function (parent) {
+                            console.log("partnerFields: " + partnerFields)
+                            console.log("parent found: ")
+                            console.log(parent)
+                            console.log(parent[0])
+                            if (parent[0]) {
+                                if (parent[0]['id'] != data[0]['partner_id'][0]) {
+                                    console.log("true!")
+                                    autofillInput(elem, "partner", [parent[0]]);
+                                }
+                            }
+                        })
+
+
+
                         snippet.find(`[data-autofill="children"]`).each(function (i, selectTag) {
                             for (const child of children) {
                                 $(selectTag).append(`<option value="${child.name}">${child.name}</option>`);
@@ -108,90 +125,104 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                                 for (const child of children) {
                                     if (child.name === selectTag.value)
                                         autofillInput(elem, "child", [child]);
+                                    getData(partnerFields, { method: "partner", child_id: child.id }).then(function (parent) {
+                                        console.log("partnerFields: " + partnerFields)
+                                        console.log("parent found: ")
+                                        console.log(parent)
+                                        console.log(parent[0])
+                                        if (parent[0]) {
+                                            if (parent[0]['id'] != data[0]['partner_id'][0]) {
+                                                console.log("true!")
+                                                autofillInput(elem, "partner", [parent[0]]);
+                                            }
+                                        }
+                                    })
+
                                 };
                             });
                         });
                     });
                 });
-            };
 
-            const tabs = snippet.find(`ul[role="tablist"] li a[role="tab"]`);
-            tabs.each(function (i) {
-                if (i < tabs.length) {
-                    const currentTab = $(this);
-                    const currentTabContent = $(this.attributes.href.textContent);
-                    const nextTab = $(tabs[i + 1])
-                    if (nextTab.length) {
-                        const nextTabContent = $(tabs[i + 1].attributes.href.textContent);
-                        const nextTabButton = currentTabContent
-                            .find(`div[data-name="Next Button"]>a`)
-                            .on("click", function (event) {
-                                event.preventDefault();
-                                currentTabContent.find(".s_website_form_input").each(validateInput);
-                                if (!currentTabContent.find(`.is-invalid`).length) { // Check if all tags are valid
-                                    elem.scrollIntoView({ behavior: "smooth" });
-                                    currentTab.toggleClass("active");
-                                    nextTab.toggleClass("active");
-                                    currentTabContent.toggleClass("active show");
-                                    nextTabContent.toggleClass("active show");
-                                } else {
-                                    Dialog.alert(this, _t("Please fill in all required fields and make sure data is valid"));
-                                };
-                            });
+                const tabs = snippet.find(`ul[role="tablist"] li a[role="tab"]`);
+                tabs.each(function (i) {
+                    if (i < tabs.length) {
+                        const currentTab = $(this);
+                        const currentTabContent = $(this.attributes.href.textContent);
+                        const nextTab = $(tabs[i + 1])
+                        if (nextTab.length) {
+                            const nextTabContent = $(tabs[i + 1].attributes.href.textContent);
+                            const nextTabButton = currentTabContent
+                                .find(`div[data-name="Next Button"]>a`)
+                                .on("click", function (event) {
+                                    event.preventDefault();
+                                    currentTabContent.find(".s_website_form_input").each(validateInput);
+                                    if (!currentTabContent.find(`.is-invalid`).length) { // Check if all tags are valid
+                                        elem.scrollIntoView({ behavior: "smooth" });
+                                        currentTab.toggleClass("active");
+                                        nextTab.toggleClass("active");
+                                        currentTabContent.toggleClass("active show");
+                                        nextTabContent.toggleClass("active show");
+                                    } else {
+                                        Dialog.alert(this, _t("Please fill in all required fields and make sure data is valid"));
+                                    };
+                                });
+                        };
                     };
-                };
-            });
+                });
 
-            snippet.find('form').each(function () {
-                let self = $(this);
-                let action = this.action;
-                let model_name = self.data('model_name');
-                let hidden = self.find(`input[type="hidden"]`);
-                let name = hidden[0].name;
-                let value = hidden[0].value;
-                const unique_key = action + model_name + name + value;
+                snippet.find('form').each(function () {
+                    let self = $(this);
+                    let action = this.action;
+                    let model_name = self.data('model_name');
+                    let hidden = self.find(`input[type="hidden"]`);
+                    let name = hidden[0].name;
+                    let value = hidden[0].value;
+                    const unique_key = action + model_name + name + value;
 
-                let storage = localStorage.getItem(unique_key);
-                if (storage == null) { storage = new Object() }
-                else { storage = JSON.parse(storage) }
+                    let storage = localStorage.getItem(unique_key);
+                    if (storage == null) { storage = new Object() }
+                    else { storage = JSON.parse(storage) }
 
-                for (let field in storage) {
-                    snippet.find(`[name="${field}"]`).each(function () {
-                        if (this.type === 'checkbox') {
-                            this.checked = storage[field];
-                        }
-                        else if (this.type === 'radio') {
-                            if (this.value == storage[field]) {
-                                this.checked = true
-                            }
-                        }
-                        else {
-                            this.value = storage[field];
-                        }
-
-                        $(this).on("input", function () {
+                    for (let field in storage) {
+                        snippet.find(`[name="${field}"]`).each(function () {
                             if (this.type === 'checkbox') {
-                                storage[field] = this.checked;
+                                this.checked = storage[field];
+                            }
+                            else if (this.type === 'radio') {
+                                if (this.value == storage[field]) {
+                                    this.checked = true
+                                }
                             }
                             else {
-                                storage[field] = this.value;
+                                this.value = storage[field];
                             }
-                            console.log("onInput", storage[this.name])
-                            localStorage.setItem(unique_key, JSON.stringify(storage));
-                        });
-                    });
-                }
 
-                self.find(".s_website_form_input").each(function () {
-                    if (this.type === 'checkbox') {
-                        storage[this.name] = this.checked;
+                            $(this).on("input", function () {
+                                if (this.type === 'checkbox') {
+                                    storage[field] = this.checked;
+                                }
+                                else {
+                                    storage[field] = this.value;
+                                }
+                                console.log("onInput", storage[this.name])
+                                localStorage.setItem(unique_key, JSON.stringify(storage));
+                            });
+                        });
                     }
-                    else {
-                        storage[this.name] = this.value;
-                    }
-                    localStorage.setItem(unique_key, JSON.stringify(storage));
+
+                    self.find(".s_website_form_input").each(function () {
+                        if (this.type === 'checkbox') {
+                            storage[this.name] = this.checked;
+                        }
+                        else {
+                            storage[this.name] = this.value;
+                        }
+                        localStorage.setItem(unique_key, JSON.stringify(storage));
+                    });
                 });
-            });
+
+            };
         });
     });
 });

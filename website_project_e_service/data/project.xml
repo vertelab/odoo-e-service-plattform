@@ -17,12 +17,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="nav_tabs_link_2" data-toggle="tab" href="#nav_tabs_content_2" role="tab" aria-controls="nav_tabs_content_2" aria-selected="false">Vårdnadshavares uppgifter
+                        <a class="nav-link" id="nav_tabs_link_2" data-toggle="tab" href="#nav_tabs_content_2" role="tab" aria-controls="nav_tabs_content_2" aria-selected="false">Elevuppgifter
                             <div class="outline"/><div class="arrow"/>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="nav_tabs_link_3" data-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">Elevuppgifter
+                        <a class="nav-link" id="nav_tabs_link_3" data-toggle="tab" href="#nav_tabs_content_3" role="tab" aria-controls="nav_tabs_content_3" aria-selected="false">Vårdnadshavares uppgifter
                             <div class="outline"/><div class="arrow"/>
                         </a>
                     </li>
@@ -101,6 +101,12 @@
                                                 </label>
                                                 <div class="col-sm">
                                                     <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.partner_id" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.human_parent_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="partner.human_parent_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="child.human_parent_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.human_child_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="partner.human_child_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="child.human_child_ids" />
                                                 </div>
                                             </div>
                                         </div>
@@ -115,150 +121,6 @@
                             </div>
 
                             <div class="tab-pane fade" id="nav_tabs_content_2" role="tabpanel" aria-labelledby="nav_tabs_link_2">
-                                <div class="oe_structure oe_empty">
-                                    <div class="s_website_form_rows row s_col_no_bgcolor">
-                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
-                                            <div class="container s_allow_columns">
-                                                <h3>Vårdnadshavare 1 (uppgiftslämnare)</h3>
-                                            </div>
-                                        </section>
-    
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Namn">
-                                                <span class="s_website_form_label_content">Namn</span>
-                                                <span class="s_website_form_mark"> *</span>
-                                            </label>
-                                            <input id="Namn" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Namn" data-autofill="user.name" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="email" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="E-post">
-                                                <span class="s_website_form_label_content">E-post</span>
-                                                <span class="s_website_form_mark"> *</span>
-                                            </label>
-                                            <input id="E-post" class="form-control s_website_form_input" type="email" name="Vårdnadshavare 1 E-post" required="1" placeholder="E-post" pattern="^\S+@(\S+\.)+[^\s.]{2,6}$" data-autofill="user.email" />
-                                        </div>
-                                        
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Personnummer">
-                                                <span class="s_website_form_label_content">Personnummer</span>
-                                                <span class="s_website_form_mark"> *</span>
-                                            </label>
-                                            <input id="Personnummer" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Personnummer" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" data-autofill="user.social_sec_nr" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Adress">
-                                                <span class="s_website_form_label_content">Adress</span>
-                                                <span class="s_website_form_mark"> *</span>
-                                            </label>
-                                            <input id="Adress" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Adress" required="1" placeholder="Adress" data-autofill="user.street" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Postnr">
-                                                <span class="s_website_form_label_content">Postnr</span>
-                                                <span class="s_website_form_mark"> *</span>
-                                            </label>
-                                            <input id="Postnr" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Postnr" required="1" placeholder="Postnr" data-autofill="user.zip" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Ort">
-                                                <span class="s_website_form_label_content">Ort</span>
-                                                <span class="s_website_form_mark"> *</span>
-                                            </label>
-                                            <input id="Ort" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Ort" required="1" placeholder="Ort" data-autofill="user.city" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="tel" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Telefon">
-                                                <span class="s_website_form_label_content">Telefon</span>
-                                            </label>
-                                            <input id="Telefon" class="form-control s_website_form_input" type="tel" name="Vårdnadshavare 1 Telefon" placeholder="Telefon" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Mobil">
-                                                <span class="s_website_form_label_content">Mobil</span>
-                                            </label>
-                                            <input id="Mobil" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Mobil" placeholder="Mobil" />
-                                        </div>
-
-                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
-                                            <div class="container s_allow_columns">
-                                                <h3>
-                                                    <font style="font-size: 18px;">Vårdnadshavare 2 </font>
-                                                </h3>
-                                            </div>
-                                        </section>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Namn">
-                                                <span class="s_website_form_label_content">Namn</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 Namn" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Namn" placeholder="Namn" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="email" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 E-post">
-                                                <span class="s_website_form_label_content">E-post</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 E-post" class="form-control s_website_form_input" type="email" name="Vårdnadshavare 2 E-post" placeholder="E-post" pattern="^\S+@(\S+\.)+[^\s.]{2,6}$" />
-                                        </div>
-                                        
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Personnummer">
-                                                <span class="s_website_form_label_content">Personnummer</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 Personnummer" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Personnummer" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Adress">
-                                                <span class="s_website_form_label_content">Adress</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 Adress" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Adress" placeholder="Adress" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Postnr">
-                                                <span class="s_website_form_label_content">Postnr</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 Postnr" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Postnr" placeholder="Postnr" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Ort">
-                                                <span class="s_website_form_label_content">Ort</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 Ort" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Ort" placeholder="Ort" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="tel" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Telefon">
-                                                <span class="s_website_form_label_content">Telefon</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 Telefon" class="form-control s_website_form_input" type="tel" name="Vårdnadshavare 2 Telefon" placeholder="Telefon" />
-                                        </div>
-
-                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
-                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Mobil">
-                                                <span class="s_website_form_label_content">Mobil</span>
-                                            </label>
-                                            <input id="Vårdnadshavare 2 Mobil" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Mobil" placeholder="Mobil" />
-                                        </div>
-
-                                        <div class="form-group col-12  text-right s_website_form_no_submit_label" data-name="Next Button">
-                                            <span id="s_website_form_result"></span>
-                                            <div style="width: 250px" class="s_website_form_label"></div>
-                                            <a href="#nav_tabs_link_3" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="nav_tabs_content_3" role="tabpanel" aria-labelledby="nav_tabs_link_3">
                                 <div class="oe_structure oe_empty">
                                     <div class="s_website_form_rows row s_col_no_bgcolor">
                                         <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
@@ -438,6 +300,150 @@
                                             <span id="s_website_form_result" />
                                             <div class="s_website_form_label" style="width: 250px" />
                                             <a href="#nav_tabs_link_4" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav_tabs_content_3" role="tabpanel" aria-labelledby="nav_tabs_link_3">
+                                <div class="oe_structure oe_empty">
+                                    <div class="s_website_form_rows row s_col_no_bgcolor">
+                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>Vårdnadshavare 1 (uppgiftslämnare)</h3>
+                                            </div>
+                                        </section>
+    
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Namn">
+                                                <span class="s_website_form_label_content">Namn</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Namn" class="form-control s_website_form_input" type="text" name="name" required="1" placeholder="Namn" data-autofill="user.name" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="email" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="E-post">
+                                                <span class="s_website_form_label_content">E-post</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="E-post" class="form-control s_website_form_input" type="email" name="Vårdnadshavare 1 E-post" required="1" placeholder="E-post" pattern="^\S+@(\S+\.)+[^\s.]{2,6}$" data-autofill="user.email" />
+                                        </div>
+                                        
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Personnummer">
+                                                <span class="s_website_form_label_content">Personnummer</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Personnummer" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Personnummer" required="1" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" data-autofill="user.social_sec_nr" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Adress">
+                                                <span class="s_website_form_label_content">Adress</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Adress" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Adress" required="1" placeholder="Adress" data-autofill="user.street" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Postnr">
+                                                <span class="s_website_form_label_content">Postnr</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Postnr" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Postnr" required="1" placeholder="Postnr" data-autofill="user.zip" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Ort">
+                                                <span class="s_website_form_label_content">Ort</span>
+                                                <span class="s_website_form_mark"> *</span>
+                                            </label>
+                                            <input id="Ort" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Ort" required="1" placeholder="Ort" data-autofill="user.city" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="tel" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Telefon">
+                                                <span class="s_website_form_label_content">Telefon</span>
+                                            </label>
+                                            <input id="Telefon" class="form-control s_website_form_input" type="tel" name="Vårdnadshavare 1 Telefon" placeholder="Telefon" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Mobil">
+                                                <span class="s_website_form_label_content">Mobil</span>
+                                            </label>
+                                            <input id="Mobil" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 1 Mobil" placeholder="Mobil" />
+                                        </div>
+
+                                        <section class="s_text_block col-12 pt32 pb16" data-snippet="s_text_block" data-name="Text">
+                                            <div class="container s_allow_columns">
+                                                <h3>
+                                                    <font style="font-size: 18px;">Vårdnadshavare 2 </font>
+                                                </h3>
+                                            </div>
+                                        </section>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Namn">
+                                                <span class="s_website_form_label_content">Namn</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Namn" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Namn" placeholder="Namn" data-autofill="partner.name"/>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="email" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 E-post">
+                                                <span class="s_website_form_label_content">E-post</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 E-post" class="form-control s_website_form_input" type="email" name="Vårdnadshavare 2 E-post" placeholder="E-post" pattern="^\S+@(\S+\.)+[^\s.]{2,6}$" data-autofill="partner.email"/>
+                                        </div>
+                                        
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Personnummer">
+                                                <span class="s_website_form_label_content">Personnummer</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Personnummer" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Personnummer" placeholder="Personnummer (ÅÅÅÅMMDD-XXXX)" pattern="^((20)?([01]\d|2[01])|(19)?\d{2})((01|03|05|07|08|10|12)(0[1-9]|[12]\d|3[01])|02(0[1-9]|[12]\d)|(04|06|09|11)(0[1-9]|[12]\d|30))-?\d{4}$" data-autofill="partner.social_sec_nr" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Adress">
+                                                <span class="s_website_form_label_content">Adress</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Adress" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Adress" placeholder="Adress" data-autofill="partner.street"/>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Postnr">
+                                                <span class="s_website_form_label_content">Postnr</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Postnr" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Postnr" placeholder="Postnr" data-autofill="partner.zip"/>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Ort">
+                                                <span class="s_website_form_label_content">Ort</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Ort" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Ort" placeholder="Ort" data-autofill="partner.city"/>
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="tel" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Telefon">
+                                                <span class="s_website_form_label_content">Telefon</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Telefon" class="form-control s_website_form_input" type="tel" name="Vårdnadshavare 2 Telefon" placeholder="Telefon" />
+                                        </div>
+
+                                        <div class="form-group s_website_form_field col-12 col-lg-4 s_website_form_custom" data-type="char" data-name="Field">
+                                            <label class="s_website_form_label" style="width: 250px" for="Vårdnadshavare 2 Mobil">
+                                                <span class="s_website_form_label_content">Mobil</span>
+                                            </label>
+                                            <input id="Vårdnadshavare 2 Mobil" class="form-control s_website_form_input" type="text" name="Vårdnadshavare 2 Mobil" placeholder="Mobil" />
+                                        </div>
+
+                                        <div class="form-group col-12  text-right s_website_form_no_submit_label" data-name="Next Button">
+                                            <span id="s_website_form_result"></span>
+                                            <div style="width: 250px" class="s_website_form_label"></div>
+                                            <a href="#nav_tabs_link_3" class="btn btn-primary btn-lg o_default_snippet_text" role="button">Gå vidare</a>
                                         </div>
                                     </div>
                                 </div>
