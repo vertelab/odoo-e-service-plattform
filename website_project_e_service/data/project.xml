@@ -101,12 +101,12 @@
                                                 </label>
                                                 <div class="col-sm">
                                                     <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.partner_id" />
-                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.human_parent_ids" />
-                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="partner.human_parent_ids" />
-                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="child.human_parent_ids" />
-                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="user.human_child_ids" />
-                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="partner.human_child_ids" />
-                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_id" placeholder="" data-autofill="child.human_child_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="human_parent_ids" placeholder="" data-autofill="user.human_parent_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_human_parent_ids" placeholder="" data-autofill="partner.human_parent_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="child_human_parent_ids" placeholder="" data-autofill="child.human_parent_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="user_human_child_ids" placeholder="" data-autofill="user.human_child_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="partner_human_child_ids" placeholder="" data-autofill="partner.human_child_ids" />
+                                                    <input id="kund" type="text" class="form-control s_website_form_input" name="child_human_child_ids" placeholder="" data-autofill="child.human_child_ids" />
                                                 </div>
                                             </div>
                                         </div>
