@@ -164,7 +164,6 @@ class WebsiteFormExtended(WebsiteForm):
                     'allowed_portal_user_ids': [(4, request.env.uid)]
                 })
         record = request.env[model_name].with_user(SUPERUSER_ID).with_context(mail_create_nosubscribe=True).create(values)
-
         if custom or meta:
             _custom_label = "%s\n___________\n\n" % _("Other Information:")  # Title for custom fields
             if model_name == 'mail.mail':
@@ -190,5 +189,4 @@ class WebsiteFormExtended(WebsiteForm):
                     'res_id': record.id,
                 }
                 mail_id = request.env['mail.message'].with_user(SUPERUSER_ID).create(values)
-
         return record.id

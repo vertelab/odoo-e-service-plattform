@@ -85,6 +85,66 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
         return true
     };
 
+    function getUniqueKey(form) {
+        let self = $(form);
+        let action = form.action;
+        let model_name = self.data('model_name');
+        let hidden = self.find(`input[type="hidden"]`);
+        let name = hidden[0].name;
+        let value = hidden[0].value;
+        const unique_key = action + model_name + name + value;
+        return unique_key
+    }
+
+    function loadFromStorage(snippet,unique_key) {
+        let storage = localStorage.getItem(unique_key);
+        if (storage == null) { storage = new Object() }
+        else { storage = JSON.parse(storage) }
+
+        for (let field in storage) {
+            snippet.find(`[name="${field}"]`).each(function () {
+                if (this.type === 'checkbox') {
+                    this.checked = storage[field];
+                }
+                else if (this.type === 'radio') {
+                    if (this.value == storage[field]) {
+                        this.checked = true
+                    }
+                }
+                else {
+                    this.value = storage[field];
+                }
+
+                $(this).on("input", function () {
+                    if (this.type === 'checkbox') {
+                        storage[field] = this.checked;
+                    }
+                    else {
+                        storage[field] = this.value;
+                    }
+                    console.log("onInput", storage[this.name])
+                    localStorage.setItem(unique_key, JSON.stringify(storage));
+                });
+            });
+        }
+    }
+
+    function saveToStorage(form,unique_key) {
+        let storage = localStorage.getItem(unique_key);
+        if (storage == null) { storage = new Object() }
+        else { storage = JSON.parse(storage) }
+
+        $(form).find(".s_website_form_input").each(function () {
+            if (this.type === 'checkbox') {
+                storage[this.name] = this.checked;
+            }
+            else {
+                storage[this.name] = this.value;
+            }
+            localStorage.setItem(unique_key, JSON.stringify(storage));
+        });
+    }
+
     $("document").ready(function () {
         $(`[data-snippet="s_tabs"]`).each(function () {
             const elem = this;
@@ -117,11 +177,16 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                             })
 
 
-
                             snippet.find(`[data-autofill="children"]`).each(function (i, selectTag) {
                                 for (const child of children) {
                                     $(selectTag).append(`<option value="${child.name}">${child.name}</option>`);
                                 };
+                                // Load from storage to make sure selecTag uses the previously saved value
+                                snippet.find('form').each(function(){
+                                    let unique_key = getUniqueKey(this);
+                                    loadFromStorage(snippet,unique_key);
+                                });
+
                                 $(selectTag).on("input", function () {
                                     for (const child of children) {
                                         if (child.name === selectTag.value)
@@ -141,7 +206,16 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                                         })
 
                                     };
+                                    // Call the save method
+                                    snippet.find('form').each(function(){
+                                        let unique_key = getUniqueKey(this);
+                                        saveToStorage(this,unique_key);
+                                    });
                                 });
+                            });
+                            snippet.find('form').each(function(){
+                                let unique_key = getUniqueKey(this);
+                                saveToStorage(this,unique_key);
                             });
                     });
                 });
@@ -186,33 +260,11 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                     if (storage == null) { storage = new Object() }
                     else { storage = JSON.parse(storage) }
 
-                    for (let field in storage) {
-                        snippet.find(`[name="${field}"]`).each(function () {
-                            if (this.type === 'checkbox') {
-                                this.checked = storage[field];
-                            }
-                            else if (this.type === 'radio') {
-                                if (this.value == storage[field]) {
-                                    this.checked = true
-                                }
-                            }
-                            else {
-                                this.value = storage[field];
-                            }
-
-                            $(this).on("input", function () {
-                                if (this.type === 'checkbox') {
-                                    storage[field] = this.checked;
-                                }
-                                else {
-                                    storage[field] = this.value;
-                                }
-                                console.log("onInput", storage[this.name])
-                                localStorage.setItem(unique_key, JSON.stringify(storage));
-                            });
-                        });
-                    }
-
+                    snippet.find('form').each(function(){
+                        let unique_key = getUniqueKey(this);
+                        loadFromStorage(snippet,unique_key);
+                    });
+                    
                     self.find(".s_website_form_input").each(function () {
                         if (this.type === 'checkbox') {
                             storage[this.name] = this.checked;
@@ -220,7 +272,6 @@ odoo.define("website_project_e_service.e_service_form", function (require) {
                         else {
                             storage[this.name] = this.value;
                         }
-                        localStorage.setItem(unique_key, JSON.stringify(storage));
                     });
                 });
 
