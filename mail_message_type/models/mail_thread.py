@@ -47,6 +47,7 @@ class MailThread(models.AbstractModel):
             kwargs['composition_mode'] = 'comment' if len(self.ids) == 1 else 'mass_mail'
         if not kwargs.get('message_type'):
             kwargs['message_type'] = 'comment'
+            kwargs['subtype_id'] = self.env.ref('mail.mt_comment').id
         res_id = kwargs.get('res_id', self.ids and self.ids[0] or 0)
         res_ids = kwargs.get('res_id') and [kwargs['res_id']] or self.ids
 
