@@ -32,9 +32,9 @@
         <field name="name">navet.import.tree</field>
         <field name="model">navet.import</field>
         <field name="arch" type="xml">
-          <tree>
+          <list>
             <field name="name"/>
-          </tree>
+          </list>
         </field>
     </record>
 

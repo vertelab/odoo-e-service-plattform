@@ -17,7 +17,7 @@
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Contact',
-    'version': '14.0.0.2',
+    'version': '18.0.0.2',
 
     # any module necessary for this one to work correctly
     'depends': ['contacts'],

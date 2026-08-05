@@ -24,7 +24,7 @@
     'summary': 'Adds a snippet that creates a form with stages',
     'author': 'Vertel AB',
     'category': 'Project',
-    'version': '14.0.0.0.1',
+    'version': '18.0.0.0.1',
     'website': 'https://vertel.se',
     'description': """
         14.0.0.0.1 - Initial Development
