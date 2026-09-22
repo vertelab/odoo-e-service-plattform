@@ -32,7 +32,7 @@
     'version': '18.0.1.1.0',
     # Version ledger: 14.0 = Odoo version. 1 = Major. Non regressionable code. 2 = Minor. New features that are regressionable. 3 = Bug fixes
     'license': 'AGPL-3',
-    'website': 'https://vertel.se/',
+    'website': 'https://vertel.se/apps/odoo-e-service-plattform/e-plattform-theme',
     'description': "odoo-e-plattform Theme",
     'depends': ['theme_common'],
     'data': [

@@ -4,7 +4,7 @@
     'author': 'Verified Email Europe AB',
     'maintainer': 'Verified Email Europe AB',
     'contributors': 'Hemangi Rupareliya, Verified Email Europe AB, Fredrik Arvas',
-    'website': 'https://verified-email.com/',
+    'website': 'https://vertel.se/apps/odoo-e-service-plattform/freja_partner_navet',
     'license': 'AGPL-3',
     'category': 'Tools',
     'depends': [

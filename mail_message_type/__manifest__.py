@@ -6,7 +6,8 @@
     'author': 'Vertel AB',
     'category': 'Mail',
     'version': '18.0.0.0.1',
-    'website': 'https://vertel.se',
+    'license': 'AGPL-3',
+    'website': 'https://vertel.se/apps/odoo-e-service-plattform/mail_message_type',
     'description': """
         14.0.0.0.1 - Initial Development
     """,

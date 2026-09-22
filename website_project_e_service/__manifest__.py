@@ -25,7 +25,8 @@
     'author': 'Vertel AB',
     'category': 'Project',
     'version': '18.0.0.1.0',
-    'website': 'https://vertel.se',
+    'license': 'AGPL-3',
+    'website': 'https://vertel.se/apps/odoo-e-service-plattform/website_project_e_service',
     'description': """
         14.0.0.2.0 - Add autofill for input fields
         14.0.0.1.0 - Add Skolskjuts-form
