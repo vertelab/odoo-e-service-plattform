@@ -21,15 +21,23 @@
 
 {
     'name': 'Project E-Service',
-    'summary': 'To be able to create e-service',
+    'summary': 'To be able to create e-service.',
     'author': 'Vertel AB',
     'category': 'Project',
     'version': '18.0.0.0.1',
     'license': 'AGPL-3',
     'website': 'https://vertel.se/apps/odoo-e-service-plattform/project_e_service',
-    'description': """
-        14.0.0.0.1 - Initial Development
-    """,
+    'description': '''
+Project E-Service
+=================
+
+    To be able to create e-service.
+
+    Features:
+
+        - UI Integration: Extends 2 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on e_service.category, e_service_id, project.e_service.category, project.project.
+    ''',
     'depends': ['project'],
     'data': [
         'security/ir.model.access.csv',

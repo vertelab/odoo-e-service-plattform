@@ -21,15 +21,22 @@
 
 {
     'name': 'Website Form Stages',
-    'summary': 'Adds a snippet that creates a form with stages',
+    'summary': 'Adds a snippet that creates a form with stages.',
     'author': 'Vertel AB',
     'category': 'Project',
     'version': '18.0.0.0.1',
     'license': 'AGPL-3',
     'website': 'https://vertel.se/apps/odoo-e-service-plattform/website_form_stages',
-    'description': """
-        14.0.0.0.1 - Initial Development
-    """,
+    'description': '''
+Website Form Stages
+===================
+
+    Adds a snippet that creates a form with stages.
+
+    Features:
+
+        - UI Integration: Extends 2 view(s) in the Odoo interface.
+    ''',
     'depends': ['website','mail','google_recaptcha'],
     'data': [
         'views/template.xml',

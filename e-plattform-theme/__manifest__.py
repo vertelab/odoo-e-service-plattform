@@ -23,7 +23,17 @@
 #
 {
     'name': "Odoo-e-plattform Theme",
-    'summary': "Theme changes for odoo-e-plattform",
+    'summary': "Theme changes for odoo-e-plattform.",
+    'description': '''
+Odoo-e-plattform Theme
+======================
+
+    Theme changes for odoo-e-plattform.
+
+    Features:
+
+        - UI Integration: Extends 2 view(s) in the Odoo interface.
+    ''',
     'author': 'Vertel AB',
     'contributor': '',
     'maintainer': 'Vertel AB',

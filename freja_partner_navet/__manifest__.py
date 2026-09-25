@@ -1,5 +1,17 @@
 {
     'name': 'Freja eID Integration',
+    'summary': "Identifies partners with Freja eID via Navet.",
+    'description': '''
+Freja eID Integration
+=====================
+
+    Identifies partners with Freja eID via Navet.
+
+    Features:
+
+        - UI Integration: Extends 2 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on auth.oauth.provider.
+    ''',
     'version': '18.0.1.0.4',
     'author': 'Verified Email Europe AB',
     'maintainer': 'Verified Email Europe AB',
