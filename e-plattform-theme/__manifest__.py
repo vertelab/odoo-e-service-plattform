@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo SA, Open Source Management Solution, third party addon
-#    Copyright (C) 2021- Vertel AB (<https://vertel.se>).
+#    Copyright (C) 2021- Vertel Sverige AB (<https://vertel.se>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
@@ -23,26 +23,16 @@
 #
 {
     'name': "Odoo-e-plattform Theme",
-    'summary': "Theme changes for odoo-e-plattform.",
-    'description': '''
-Odoo-e-plattform Theme
-======================
-
-    Theme changes for odoo-e-plattform.
-
-    Features:
-
-        - UI Integration: Extends 2 view(s) in the Odoo interface.
-    ''',
-    'author': 'Vertel AB',
+    'summary': "Theme changes for odoo-e-plattform",
+    'author': 'Vertel Sverige AB',
     'contributor': '',
-    'maintainer': 'Vertel AB',
+    'maintainer': 'Vertel Sverige AB',
     'repository': '/git.vertel.se/vertelab/odooext-skogsstyrelsen.git',
     'category': 'Theme/Corporate',
     'version': '18.0.1.1.0',
     # Version ledger: 14.0 = Odoo version. 1 = Major. Non regressionable code. 2 = Minor. New features that are regressionable. 3 = Bug fixes
     'license': 'AGPL-3',
-    'website': 'https://vertel.se/apps/odoo-e-service-plattform/e-plattform-theme',
+    'website': 'https://vertel.se/',
     'description': "odoo-e-plattform Theme",
     'depends': ['theme_common'],
     'data': [

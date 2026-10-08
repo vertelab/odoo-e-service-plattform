@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo SA, Open Source Management Solution, third party addon
-#    Copyright (C) 2021- Vertel AB (<https://vertel.se>).
+#    Copyright (C) 2021- Vertel Sverige AB (<https://vertel.se>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,22 +21,14 @@
 
 {
     'name': 'Website Form Stages',
-    'summary': 'Adds a snippet that creates a form with stages.',
-    'author': 'Vertel AB',
+    'summary': 'Adds a snippet that creates a form with stages',
+    'author': 'Vertel Sverige AB',
     'category': 'Project',
     'version': '18.0.0.0.1',
-    'license': 'AGPL-3',
-    'website': 'https://vertel.se/apps/odoo-e-service-plattform/website_form_stages',
-    'description': '''
-Website Form Stages
-===================
-
-    Adds a snippet that creates a form with stages.
-
-    Features:
-
-        - UI Integration: Extends 2 view(s) in the Odoo interface.
-    ''',
+    'website': 'https://vertel.se',
+    'description': """
+        14.0.0.0.1 - Initial Development
+    """,
     'depends': ['website','mail','google_recaptcha'],
     'data': [
         'views/template.xml',

@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo SA, Open Source Management Solution, third party addon
-#    Copyright (C) 2021- Vertel AB (<https://vertel.se>).
+#    Copyright (C) 2021- Vertel Sverige AB (<https://vertel.se>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,23 +21,14 @@
 
 {
     'name': 'Project E-Service',
-    'summary': 'To be able to create e-service.',
-    'author': 'Vertel AB',
+    'summary': 'To be able to create e-service',
+    'author': 'Vertel Sverige AB',
     'category': 'Project',
     'version': '18.0.0.0.1',
-    'license': 'AGPL-3',
-    'website': 'https://vertel.se/apps/odoo-e-service-plattform/project_e_service',
-    'description': '''
-Project E-Service
-=================
-
-    To be able to create e-service.
-
-    Features:
-
-        - UI Integration: Extends 2 view(s) in the Odoo interface.
-        - Extends Odoo: Builds on e_service.category, e_service_id, project.e_service.category, project.project.
-    ''',
+    'website': 'https://vertel.se',
+    'description': """
+        14.0.0.0.1 - Initial Development
+    """,
     'depends': ['project'],
     'data': [
         'security/ir.model.access.csv',
@@ -47,3 +38,4 @@ Project E-Service
     'application': True,
     'installable': True,
 }
+# vim:expandtab:smartindent:tabstop=4s:softtabstop=4:shiftwidth=4:
